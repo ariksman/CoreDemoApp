@@ -5,6 +5,8 @@ The program follows the MVVM design principle and uses WPF for the user interfac
 
 - Mvvm light [http://www.mvvmlight.net]
 - Autofac [https://autofac.org/]
+- Entity Framework Core 2.1 [https://docs.microsoft.com/en-us/ef/]
+- SQLite [https://www.sqlite.org/index.html]
 
 #
 
