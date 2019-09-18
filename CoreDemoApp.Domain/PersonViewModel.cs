@@ -35,5 +35,4 @@ namespace CoreDemoApp.Domain
       return persons;
     }
   }
-
 }
