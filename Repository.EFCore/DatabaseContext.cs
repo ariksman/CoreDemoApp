@@ -19,11 +19,6 @@ namespace Repository.EFCore
             //optionsBuilder.UseSqlite("Data Source=test.db");
         }
 
-/*        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=blog.db"));
-        }*/
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
