@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.1.0" />
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreDemoApp.Application\CoreDemoApp.Application.csproj" />
+    <ProjectReference Include="..\CoreDemoApp.Common\CoreDemoApp.Common.csproj" />
+    <ProjectReference Include="..\CoreDemoApp.Domain\CoreDemoApp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
