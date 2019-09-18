@@ -16,6 +16,8 @@
     <ProjectReference Include="..\CoreDemoApp.Application\CoreDemoApp.Application.csproj" />
     <ProjectReference Include="..\CoreDemoApp.Common\CoreDemoApp.Common.csproj" />
     <ProjectReference Include="..\CoreDemoApp.Domain\CoreDemoApp.Domain.csproj" />
+    <ProjectReference Include="..\Repository.Core\Repository.Core.csproj" />
+    <ProjectReference Include="..\Repository.EFCore\Repository.EFCore.csproj" />
   </ItemGroup>
 
 </Project>
