@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using CoreDemoApp.Common.DDD;
 
 namespace CoreDemoApp.Domain.DDD
 {
-
-  /// <summary> An aggregate root base class. Explicitly mark aggregate roots and implement their common logic </summary>
+  /// <summary> An aggregate root base class.
+  /// Explicitly mark aggregate roots and implement their common logic
+  /// </summary>
   public abstract class AggregateRoot : Entity
   {
     private readonly List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
