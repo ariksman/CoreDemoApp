@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Repository.Core.Domain;
+using Repository.Core.DataModel;
 
 namespace Repository.Core.Repositories
 {

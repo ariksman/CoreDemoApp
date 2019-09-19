@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Repository.Core.Domain
+namespace Repository.Core.DataModel
 {
     public class Employer
     {

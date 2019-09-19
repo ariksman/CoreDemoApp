@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Repository.Core.Domain;
+using Repository.Core.DataModel;
 using Repository.Core.Repositories;
 
 namespace Repository.EFCore.Repositories
