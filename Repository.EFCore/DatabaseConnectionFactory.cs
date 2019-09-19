@@ -18,7 +18,7 @@ namespace Repository.EFCore
       return new DatabaseContext(CreateConnectionString(dir));
     }
 
-    private string GetInstallDirectory()
+    public static string GetInstallDirectory()
     {
       var installationDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
       var filePath = Path.Combine(installationDirectory, "localDb.sqlite");

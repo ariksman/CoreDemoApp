@@ -10,8 +10,9 @@ namespace Repository.EFCore
   {
     private readonly DatabaseContext _context;
 
-    public EfUnitOfWork(string dataSource)
+    public EfUnitOfWork(string dataSource = null)
     {
+      if (dataSource == null) dataSource = DatabaseConnectionFactory.GetInstallDirectory();
       var options = DatabaseConnectionFactory.CreateConnectionString(dataSource);
       _context = new DatabaseContext(options);
 
