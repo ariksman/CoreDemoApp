@@ -1,13 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using CoreDemoApp.Common.CQS;
+using CoreDemoApp.Domain;
+using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
 
 namespace CoreDemoApp.ViewModels
 {
   public class MainViewModel : ModelBase
   {
-    public MainViewModel()
+    private readonly ICommandDispatcher _commandDispatcher;
+    private readonly IQueryDispatcher _queryDispatcher;
+
+    public MainViewModel(ICommandDispatcher commandDispatcher, IQueryDispatcher queryDispatcher)
     {
+      _commandDispatcher = commandDispatcher;
+      _queryDispatcher = queryDispatcher;
+
       if (IsInDesignMode)
       {
         var persons = new PersonViewModel().CreatePersonData(20);
@@ -46,6 +55,8 @@ namespace CoreDemoApp.ViewModels
 
     private void SeedDatabaseExecute()
     {
+      var command = new SeedDatabaseCommand(20);
+      _commandDispatcher.Dispatch<SeedDatabaseCommand, Result>(command);
       //using (IUnitOfWork context = ServiceLocator.Current.GetInstance<IUnitOfWork>("LocalDatabase"))
       //{
       //  var dataSeeder = new DatabaseSeeder(context);
