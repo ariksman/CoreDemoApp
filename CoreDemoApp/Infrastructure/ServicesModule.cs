@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CoreDemoApp.Application.Interfaces;
 using CoreDemoApp.Domain;
 
 namespace CoreDemoApp.Infrastructure
@@ -8,6 +9,7 @@ namespace CoreDemoApp.Infrastructure
     protected override void Load(ContainerBuilder builder)
     {
       builder.RegisterType<DatabaseSeeder>().As<IDatabaseSeeder>();
+      builder.RegisterType<OokiiMessageDialogService>().As<IMessageDialogService>();
     }
   }
 }
