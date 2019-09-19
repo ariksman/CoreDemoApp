@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CoreDemoApp.Application.Interfaces;
 using CoreDemoApp.Common.CQS;
+using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
 using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
