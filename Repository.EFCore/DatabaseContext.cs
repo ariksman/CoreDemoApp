@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Repository.Core.Domain;
+using Repository.Core.DataModel;
 
 namespace Repository.EFCore
 {
