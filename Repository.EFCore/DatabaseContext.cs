@@ -8,7 +8,6 @@ namespace Repository.EFCore
         public DatabaseContext(DbContextOptions options)
             : base(options)
         {
-
         }
 
         public DbSet<Employer> Employers { get; set; }
