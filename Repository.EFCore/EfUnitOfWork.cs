@@ -32,10 +32,7 @@ namespace Repository.EFCore
     {
       if (disposing)
       {
-        if (_context != null)
-        {
-          _context.Dispose();
-        }
+        _context?.Dispose();
       }
     }
 
