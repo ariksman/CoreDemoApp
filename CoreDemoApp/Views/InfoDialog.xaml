@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoreDemoApp.Views"
         mc:Ignorable="d"
-        Title="InfoDialog" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        ShowInTaskbar="False"
+        ResizeMode="NoResize" MinWidth="300" SizeToContent="WidthAndHeight">
+    <Border BorderBrush="White" BorderThickness="2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="textBlock" Text="The Message Text" TextWrapping="Wrap" Margin="5"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="Margin" Value="5"/>
+                        <Setter Property="Width" Value="75"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Content="Yes" Click="ButtonYes_Click"/>
+                <Button Content="No" Click="ButtonNo_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>
