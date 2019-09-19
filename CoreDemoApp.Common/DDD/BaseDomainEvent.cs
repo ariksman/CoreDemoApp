@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreDemoApp.Domain.DDD
+namespace CoreDemoApp.Common.DDD
 {
   public abstract class BaseDomainEvent
   {

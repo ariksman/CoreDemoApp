@@ -1,4 +1,4 @@
-﻿namespace CoreDemoApp.Domain.DDD
+﻿namespace CoreDemoApp.Common.DDD
 {
   public interface IDomainEvent
   {

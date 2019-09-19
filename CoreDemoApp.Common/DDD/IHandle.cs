@@ -1,6 +1,4 @@
-﻿using CoreDemoApp.Common.DDD;
-
-namespace CoreDemoApp.Common.CQS
+﻿namespace CoreDemoApp.Common.DDD
 {
   public interface IHandle<T> where T : BaseDomainEvent
   {
