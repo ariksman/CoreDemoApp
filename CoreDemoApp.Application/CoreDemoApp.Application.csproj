@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CoreDemoApp.Common\CoreDemoApp.Common.csproj" />
+    <ProjectReference Include="..\CoreDemoApp.Domain\CoreDemoApp.Domain.csproj" />
     <ProjectReference Include="..\Repository.Core\Repository.Core.csproj" />
   </ItemGroup>
 
