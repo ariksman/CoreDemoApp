@@ -4,7 +4,7 @@ using CoreDemoApp.Domain.DDD;
 
 namespace CoreDemoApp.Domain
 {
-  public class Person : Entity
+  public class Person : AggregateRoot
   {
 
     public Person()
