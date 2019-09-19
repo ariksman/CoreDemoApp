@@ -8,4 +8,9 @@
     <PackageReference Include="CSharpFunctionalExtensions" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CoreDemoApp.Common\CoreDemoApp.Common.csproj" />
+    <ProjectReference Include="..\Repository.Core\Repository.Core.csproj" />
+  </ItemGroup>
+
 </Project>
