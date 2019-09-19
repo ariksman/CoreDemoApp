@@ -29,7 +29,6 @@ namespace CoreDemoApp.ViewModels
       }
     }
 
-
     #region Relay commands
 
     private RelayCommand _loadPersonsCommand;
