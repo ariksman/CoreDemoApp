@@ -1,14 +1,10 @@
 ﻿using Repository.Core;
-using Repository.Core.Domain;
+using Repository.Core.DataModel;
 
 namespace CoreDemoApp.Domain
 {
   public class DatabaseSeeder : IDatabaseSeeder
   {
-    public DatabaseSeeder()
-    {
-    }
-
     public void SeedDatabase(IUnitOfWork context)
     {
       var newEmployer1 = new Employer()
