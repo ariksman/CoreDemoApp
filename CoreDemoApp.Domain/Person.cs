@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoreDemoApp.Domain.DDD;
 
 namespace CoreDemoApp.Domain
 {
-  public class Person
+  public class Person : Entity
   {
 
     public Person()
     {
     }
 
-    public int Id { get; set; }
     public string Name { get; set; }
     public string WorkPlace { get; set; }
-    public int Age { get; set; }
+    public Age Age { get; set; }
 
 
     public static List<Person> CreatePersonData(int count, Random rnd)
@@ -26,7 +26,7 @@ namespace CoreDemoApp.Domain
         {
           Id = i,
           Name = "test " + i,
-          Age = rnd.Next(),
+          Age = Domain.Age.Create(rnd.Next()).Value,
         };
 
         persons.Add(newPerson);
