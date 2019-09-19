@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using CoreDemoApp.Application.Interfaces;
 using CoreDemoApp.Common.CQS;
 using CoreDemoApp.Domain;
 using CSharpFunctionalExtensions;
@@ -11,11 +12,16 @@ namespace CoreDemoApp.ViewModels
   {
     private readonly ICommandDispatcher _commandDispatcher;
     private readonly IQueryDispatcher _queryDispatcher;
+    private readonly IMessageDialogService _messageDialog;
 
-    public MainViewModel(ICommandDispatcher commandDispatcher, IQueryDispatcher queryDispatcher)
+    public MainViewModel(
+      ICommandDispatcher commandDispatcher, 
+      IQueryDispatcher queryDispatcher,
+      IMessageDialogService messageDialog)
     {
       _commandDispatcher = commandDispatcher;
       _queryDispatcher = queryDispatcher;
+      _messageDialog = messageDialog;
 
       if (IsInDesignMode)
       {
@@ -56,12 +62,8 @@ namespace CoreDemoApp.ViewModels
     private void SeedDatabaseExecute()
     {
       var command = new SeedDatabaseCommand(20);
-      _commandDispatcher.Dispatch<SeedDatabaseCommand, Result>(command);
-      //using (IUnitOfWork context = ServiceLocator.Current.GetInstance<IUnitOfWork>("LocalDatabase"))
-      //{
-      //  var dataSeeder = new DatabaseSeeder(context);
-      //  dataSeeder.SeedDatabase();
-      //}
+      _commandDispatcher.Dispatch<SeedDatabaseCommand, Result>(command)
+        .OnFailure(details => _messageDialog.ShowErrorMessage(GetType().Name, "Error while seeding database", details));
     }
 
     private void LoadDatabaseExecute()
