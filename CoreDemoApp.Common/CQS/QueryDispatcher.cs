@@ -3,6 +3,8 @@ using Autofac;
 
 namespace CoreDemoApp.Common.CQS
 {
+  // https://gist.github.com/jbogard/54d6569e883f63afebc7
+  // http://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/
   public class QueryDispatcher : IQueryDispatcher
   {
     private readonly ILifetimeScope _scope;
@@ -27,5 +29,9 @@ namespace CoreDemoApp.Common.CQS
       var handler = _scope.Resolve<IQueryHandler<TQuery, TResult>>();
       return handler.HandleAsync(query);
     }
+  }
+  public interface IHandle<T> where T : BaseDomainEvent
+  {
+    void Handle(T domainEvent);
   }
 }
