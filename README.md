@@ -6,7 +6,7 @@ The program is implemented with .NET Core 3.0 preview, follows the MVVM design p
 - .NET Core 3.0 [https://docs.microsoft.com/en-us/dotnet/core/]
 - Mvvm light [http://www.mvvmlight.net]
 - Autofac [https://autofac.org/]
-- Entity Framework Core 2.1 [https://docs.microsoft.com/en-us/ef/]
+- Entity Framework Core 3.0 rc1 [https://docs.microsoft.com/en-us/ef/]
 - SQLite [https://www.sqlite.org/index.html]
 
 #
