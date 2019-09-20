@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CoreDemoApp.Domain.DDD;
 
-namespace CoreDemoApp.Domain
+namespace CoreDemoApp.Domain.Model
 {
   public class Person : AggregateRoot
   {
@@ -26,7 +26,7 @@ namespace CoreDemoApp.Domain
         {
           Id = i,
           Name = "test " + i,
-          Age = Domain.Age.Create(rnd.Next()).Value,
+          Age = Age.Create(rnd.Next()).Value,
         };
 
         persons.Add(newPerson);
