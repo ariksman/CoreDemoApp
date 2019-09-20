@@ -7,7 +7,7 @@ namespace CoreDemoApp.Dialogs
   {
     public void ShowErrorMessage(string sender, string message, string details)
     {
-      new InfoDialog(message, details)
+      new YesNoDialog(message, details)
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = App.Current.MainWindow
@@ -19,7 +19,7 @@ namespace CoreDemoApp.Dialogs
       throw new NotImplementedException();
     }
 
-    public void ShowUserMessage(string sender, string message, Exception ex)
+    public void ShowUserMessage(string sender, string message)
     {
       throw new NotImplementedException();
     }

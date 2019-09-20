@@ -39,6 +39,7 @@ namespace CoreDemoApp
       var assemblies = GetAllProgramAssemblies().ToList();
 
       builder.RegisterModule(new HandlerAutoFacModule(assemblies));
+      builder.RegisterModule(new AutoMapperModule(assemblies));
       builder.RegisterModule<RepositoryModule>();
       builder.RegisterModule<ServicesModule>();
       builder.RegisterModule<ViewModelServicesModule>();
