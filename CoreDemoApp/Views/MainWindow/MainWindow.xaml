@@ -42,15 +42,10 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="10,10,10,10" VerticalAlignment="Top">
-            <Button
-                Content="Load runtime data"
-                Margin="5,0,5,0"
-                Command="{Binding LoadPersonsCommand}"
-                Style="{StaticResource GoButtonStyle}"/>
             <Button  
-                Content="Save new" 
+                Content="Seed database"
                 Margin="5,0,5,0"
-                Command="{Binding SaveNewPersonsCommand}"
+                Command="{Binding SeedDatabaseCommand}"
                 Style="{StaticResource GoButtonStyle}"/>
             <Button 
                 Content="Load database"
@@ -58,14 +53,24 @@
                 Command="{Binding LoadDatabaseCommand}"
                 Style="{StaticResource GoButtonStyle}"/>
             <Button  
-                Content="Seed database"
+                Content="Save new" 
                 Margin="5,0,5,0"
-                Command="{Binding SeedDatabaseCommand}"
+                Command="{Binding SaveNewPersonsCommand}"
                 Style="{StaticResource GoButtonStyle}"/>
             <Button
                 Content="Delete person"
                 Margin="5,0,5,0"
                 Command="{Binding DeletePersonCommand}"
+                Style="{StaticResource ClearButtonStyle}"/>
+            <Button
+                Content="Clear view"
+                Margin="5,0,5,0"
+                Command="{Binding ClearPersonsCommand}"
+                Style="{StaticResource ClearButtonStyle}"/>
+            <Button
+                Content="Clear database"
+                Margin="5,0,5,0"
+                Command="{Binding DeleteDatabaseCommand}"
                 Style="{StaticResource ClearButtonStyle}"/>
         </StackPanel>
     </Grid>
