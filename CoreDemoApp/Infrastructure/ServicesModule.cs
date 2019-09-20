@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
+using CoreDemoApp.Domain.ImpureServices;
 
 namespace CoreDemoApp.Infrastructure
 {
