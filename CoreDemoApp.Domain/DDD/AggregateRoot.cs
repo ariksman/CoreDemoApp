@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CoreDemoApp.Common.DDD;
+using CoreDemoApp.Core.DDD;
 
 namespace CoreDemoApp.Domain.DDD
 {

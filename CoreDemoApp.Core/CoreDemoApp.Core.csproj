@@ -5,12 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
     <PackageReference Include="CSharpFunctionalExtensions" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CoreDemoApp.Core\CoreDemoApp.Core.csproj" />
-    <ProjectReference Include="..\Repository.Core\Repository.Core.csproj" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
