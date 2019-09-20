@@ -1,4 +1,4 @@
-﻿using CoreDemoApp.Common.CQS;
+﻿using CoreDemoApp.Core.CQS;
 
 namespace CoreDemoApp.Domain
 {
