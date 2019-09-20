@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using CoreDemoApp.Infrastructure;
-using CoreDemoApp.ViewModels;
+using CoreDemoApp.Views.MainWindow;
 
 namespace CoreDemoApp
 {

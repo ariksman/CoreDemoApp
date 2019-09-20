@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CoreDemoApp.ViewModels
+namespace CoreDemoApp.Views.MainWindow
 {
   public class PersonViewModel : ModelBase
   {

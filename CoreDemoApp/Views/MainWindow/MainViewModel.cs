@@ -9,7 +9,7 @@ using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
 using Repository.Core.DataModel;
 
-namespace CoreDemoApp.ViewModels
+namespace CoreDemoApp.Views.MainWindow
 {
   public class MainViewModel : ModelBase
   {
@@ -82,23 +82,6 @@ namespace CoreDemoApp.ViewModels
           IsChecked = true;
           _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {Persons.Count} items");
         });
-    }
-
-    private void CreatePersonListFromSource(IEnumerable<object> source)
-    {
-      //Persons = new ObservableCollection<Person>();
-
-      //foreach (var worker in source)
-      //{
-      //  var newPerson = new Person()
-      //  {
-      //    Name = worker.Name,
-      //    WorkPlace = worker.Employer1.Name,
-      //    Age = worker.Age,
-      //    Id = worker.WorkerId,
-      //  };
-      //  Persons.Add(newPerson);
-      //}
     }
 
     private void SaveNewPersonsExecute()

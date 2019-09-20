@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using GalaSoft.MvvmLight;
 
-namespace CoreDemoApp.ViewModels
+namespace CoreDemoApp
 {
   /// <summary>
   /// See <a href="https://www.codeproject.com/Tips/876349/WPF-Validation-using-INotifyDataErrorInfo">this link</a> for more information.

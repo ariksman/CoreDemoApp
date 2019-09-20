@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace CoreDemoApp.Views
+namespace CoreDemoApp.Views.MainWindow
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml

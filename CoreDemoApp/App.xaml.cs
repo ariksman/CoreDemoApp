@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using CoreDemoApp.Views;
+using CoreDemoApp.Views.MainWindow;
 
 namespace CoreDemoApp
 {

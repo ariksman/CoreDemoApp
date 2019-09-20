@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
 using CoreDemoApp.Domain;
-using CoreDemoApp.ViewModels;
+using CoreDemoApp.Views.MainWindow;
 using Repository.Core.DataModel;
 
 namespace CoreDemoApp.Infrastructure.AutoMapperProfiles

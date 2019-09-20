@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using CoreDemoApp.Dialogs;
-using CoreDemoApp.ViewModels;
+using CoreDemoApp.Views.MainWindow;
 
 namespace CoreDemoApp.Infrastructure
 {
