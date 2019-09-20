@@ -64,6 +64,7 @@ namespace CoreDemoApp.Views.MainWindow
           var personName = _selectedPerson.Name;
           var personId = _selectedPerson.Id;
           Persons.Remove(_selectedPerson);
+          ItemCount = Persons.Count;
 
           _messageDialogFunc().ShowUserMessage(GetType().Name, $"Removed person: {personName}, id: {personId} from database");
         })
@@ -87,6 +88,8 @@ namespace CoreDemoApp.Views.MainWindow
         {
           Persons = _mapper.Map<ObservableCollection<PersonViewModel>>(result);
           IsChecked = true;
+          ItemCount = Persons.Count;
+
           _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {Persons.Count} items");
         });
     }
@@ -145,6 +148,30 @@ namespace CoreDemoApp.Views.MainWindow
     #endregion
 
     #region Public properties
+
+    private string _databaseConnectionPath;
+
+    public string DatabaseConnectionPath
+    {
+      get => _databaseConnectionPath;
+      set
+      {
+        _databaseConnectionPath = value;
+        NotifyPropertyChanged();
+      }
+    }
+
+    private int _itemCount;
+
+    public int ItemCount
+    {
+      get => _itemCount;
+      set
+      {
+        _itemCount = value;
+        NotifyPropertyChanged();
+      }
+    }
 
     private bool _isChecked;
 
