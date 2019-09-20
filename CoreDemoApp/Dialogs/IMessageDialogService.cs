@@ -6,7 +6,7 @@ namespace CoreDemoApp.Dialogs
   {
     void ShowErrorMessage(string sender, string message, string details);
     void ShowWarningMessage(string sender, string message, string details);
-    void ShowUserMessage(string sender, string message, Exception ex);
+    void ShowUserMessage(string sender, string message);
     bool Confirm(string sender, string message, string details);
     void ShowException(string sender, Exception ex);
   }
