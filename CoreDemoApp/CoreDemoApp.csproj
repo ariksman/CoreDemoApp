@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="CSharpFunctionalExtensions" Version="2.1.0" />
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
@@ -15,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreDemoApp.Application\CoreDemoApp.Application.csproj" />
-    <ProjectReference Include="..\CoreDemoApp.Common\CoreDemoApp.Common.csproj" />
     <ProjectReference Include="..\CoreDemoApp.Domain\CoreDemoApp.Domain.csproj" />
     <ProjectReference Include="..\Repository.EFCore\Repository.EFCore.csproj" />
   </ItemGroup>
