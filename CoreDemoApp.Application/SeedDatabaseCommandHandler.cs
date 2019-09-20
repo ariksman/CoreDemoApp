@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using CoreDemoApp.Common.CQS;
+using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Domain;
 using CSharpFunctionalExtensions;
 using Repository.Core;
