@@ -37,8 +37,11 @@ namespace CoreDemoApp.Views.MainWindow
 
     #region Relay commands
 
-    private RelayCommand _loadPersonsCommand;
-    public RelayCommand LoadPersonsCommand => _loadPersonsCommand ??= new RelayCommand(LoadPersonsExecute);
+    private RelayCommand _clearPersonsCommand;
+    public RelayCommand ClearPersonsCommand => _clearPersonsCommand ??= new RelayCommand(ClearPersonsCommandExecute);
+
+    private RelayCommand _deleteDatabaseCommand;
+    public RelayCommand DeleteDatabaseCommand => _deleteDatabaseCommand ??= new RelayCommand(DeleteDatabaseCommandExecute);
 
     private RelayCommand _saveNewPersonsCommand;
     public RelayCommand SaveNewPersonsCommand => _saveNewPersonsCommand ??= new RelayCommand(SaveNewPersonsExecute);
@@ -54,14 +57,18 @@ namespace CoreDemoApp.Views.MainWindow
 
     private void DeletePersonExecute()
     {
-      //using (IUnitOfWork context = ServiceLocator.Current.GetInstance<IUnitOfWork>("LocalDatabase"))
-      //{
-      //  if (context.Workers.RemoveWorker(SelectedPerson.Id))
-      //  {
-      //    context.Complete();
-      //    Persons.Remove(SelectedPerson);
-      //  }
-      //}
+      var command = new RemoveSelectedPersonCommand(SelectedPerson?.Id);
+      _commandDispatcher.Dispatch<RemoveSelectedPersonCommand, Result>(command)
+        .OnSuccessTry(() =>
+        {
+          var personName = _selectedPerson.Name;
+          var personId = _selectedPerson.Id;
+          Persons.Remove(_selectedPerson);
+
+          _messageDialogFunc().ShowUserMessage(GetType().Name, $"Removed person: {personName}, id: {personId} from database");
+        })
+        .OnFailure(details =>
+          _messageDialogFunc().ShowErrorMessage(GetType().Name, $"Unable to remove {_selectedPerson?.Name}", details));
     }
 
     private void SeedDatabaseExecute()
@@ -96,14 +103,22 @@ namespace CoreDemoApp.Views.MainWindow
       //Persons.Add(newPerson);
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    private void LoadPersonsExecute()
+    private void DeleteDatabaseCommandExecute()
     {
-      //Persons = new ObservableCollection<Person>(new Person().CreatePersonData(25));
+      var command = new RemoveAllDataFromDatabaseCommand();
+      _commandDispatcher.Dispatch<RemoveAllDataFromDatabaseCommand, Result>(command)
+        .OnSuccessTry(() =>
+        {
+          _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared");
+        })
+        .OnFailure(details =>
+          _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while clearing database", details));
+    }
 
-      //IsChecked = false;
+    private void ClearPersonsCommandExecute()
+    {
+      Persons.Clear();
+      SelectedPerson = null;
     }
 
     #endregion
@@ -157,11 +172,18 @@ namespace CoreDemoApp.Views.MainWindow
 
         _selectedPerson = value;
 
-        if (_selectedPerson == null) return;
-
-        CurrentPersonId = _selectedPerson.Id;
-        CurrentPersonAge = _selectedPerson.Age;
-        CurrentPersonName = _selectedPerson.Name;
+        if (_selectedPerson == null)
+        {
+          CurrentPersonId = 0;
+          CurrentPersonAge = 0;
+          CurrentPersonName = string.Empty;
+        }
+        else
+        {
+          CurrentPersonId = _selectedPerson.Id;
+          CurrentPersonAge = _selectedPerson.Age;
+          CurrentPersonName = _selectedPerson.Name;
+        }
 
         NotifyPropertyChanged();
       }
