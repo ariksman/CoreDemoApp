@@ -16,7 +16,7 @@ namespace CoreDemoApp.Dialogs
     public void ShowErrorMessage(string sender, string message, string details)
     {
       _viewModel.Title = "Error happened!";
-      _viewModel.Message = message;
+      _viewModel.Message = message + Environment.NewLine + details;
 
       new InfoDialog()
       {
