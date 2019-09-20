@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Domain;
+using CoreDemoApp.Domain.ImpureServices;
 using CSharpFunctionalExtensions;
 using Repository.Core;
 
