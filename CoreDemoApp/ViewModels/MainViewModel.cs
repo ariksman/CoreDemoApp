@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using CoreDemoApp.Common.CQS;
+using AutoMapper;
+using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
 using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
+using Repository.Core.DataModel;
 
 namespace CoreDemoApp.ViewModels
 {
@@ -13,15 +15,18 @@ namespace CoreDemoApp.ViewModels
     private readonly ICommandDispatcher _commandDispatcher;
     private readonly IQueryDispatcher _queryDispatcher;
     private readonly IMessageDialogService _messageDialog;
+    private readonly IMapper _mapper;
 
     public MainViewModel(
       ICommandDispatcher commandDispatcher, 
       IQueryDispatcher queryDispatcher,
-      IMessageDialogService messageDialog)
+      IMessageDialogService messageDialog,
+      IMapper mapper)
     {
       _commandDispatcher = commandDispatcher;
       _queryDispatcher = queryDispatcher;
       _messageDialog = messageDialog;
+      _mapper = mapper;
 
       if (IsInDesignMode)
       {
@@ -67,6 +72,14 @@ namespace CoreDemoApp.ViewModels
 
     private void LoadDatabaseExecute()
     {
+      var query = new LoadDataForListViewQuery();
+      _queryDispatcher.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(query)
+        .OnSuccessTry(result =>
+        {
+          Persons = _mapper.Map<ObservableCollection<PersonViewModel>>(result);
+          IsChecked = true;
+          _messageDialog.ShowUserMessage(GetType().Name, "");
+        });
       //var workers = new List<Worker>();
       //using (IUnitOfWork context = ServiceLocator.Current.GetInstance<IUnitOfWork>("LocalDatabase"))
       //{
