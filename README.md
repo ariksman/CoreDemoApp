@@ -1,4 +1,4 @@
-## The program - CoreDemoApp
+## Description
 The program is implemented with .NET Core 3.0 preview, follows the MVVM design principle and uses WPF - MVVM for the user interface. Additionally, code is divided into layers and utilizing CQS for use-case implementation.
 
 ## Frameworks
