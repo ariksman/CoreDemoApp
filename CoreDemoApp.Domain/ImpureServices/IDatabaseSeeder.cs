@@ -1,6 +1,6 @@
 ﻿using Repository.Core;
 
-namespace CoreDemoApp.Domain
+namespace CoreDemoApp.Domain.ImpureServices
 {
   public interface IDatabaseSeeder
   {
