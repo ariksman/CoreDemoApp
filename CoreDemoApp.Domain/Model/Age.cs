@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace CoreDemoApp.Domain
+namespace CoreDemoApp.Domain.Model
 {
   public class Age : ValueObject<Age>
   {
