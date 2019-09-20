@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoreDemoApp.Views"
+        x:Name="YesNoDialogWindow"
         mc:Ignorable="d"
         ShowInTaskbar="False"
         Title="{Binding Title}"
@@ -25,11 +26,11 @@
                     </Style>
                 </StackPanel.Resources>
                 <Button Content="Yes" Click="ButtonYes_Click"
-                        Command="{Binding CloseWindowCommand}"
-                        CommandParameter="{Binding ElementName=InfoDialogWindow}"/>
+                        Command="{Binding ClickYesCommand}"
+                        CommandParameter="{Binding ElementName=YesNoDialogWindow}"/>
                 <Button Content="No" Click="ButtonNo_Click"
-                        Command="{Binding CloseWindowCommand}"
-                        CommandParameter="{Binding ElementName=InfoDialogWindow}"/>
+                        Command="{Binding ClickNoCommand}"
+                        CommandParameter="{Binding ElementName=YesNoDialogWindow}"/>
             </StackPanel>
         </Grid>
     </Border>

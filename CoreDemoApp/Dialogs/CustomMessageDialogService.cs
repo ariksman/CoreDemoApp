@@ -18,7 +18,7 @@ namespace CoreDemoApp.Dialogs
       _viewModel.Title = "Error happened!";
       _viewModel.Message = message;
 
-      new YesNoDialog()
+      new InfoDialog()
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
@@ -46,17 +46,30 @@ namespace CoreDemoApp.Dialogs
 
     public bool Confirm(string sender, string message, string details)
     {
-      throw new NotImplementedException();
+      _viewModel.Title = "Error happened!";
+      _viewModel.Message = message;
+
+      new YesNoDialog()
+      {
+        WindowStartupLocation = WindowStartupLocation.CenterOwner,
+        Owner = System.Windows.Application.Current.MainWindow,
+        DataContext = _viewModel,
+      }.ShowDialog();
+
+      return _viewModel.DialogResult;
     }
 
     public void ShowException(string sender, Exception ex)
     {
-      throw new NotImplementedException();
-    }
-  }
+      _viewModel.Title = "Error";
+      _viewModel.Message = ex.Message;
 
-  public interface IDialogViewModel
-  {
-    ICommand CloseWindowCommand();
+      new InfoDialog()
+      {
+        WindowStartupLocation = WindowStartupLocation.CenterOwner,
+        Owner = System.Windows.Application.Current.MainWindow,
+        DataContext = _viewModel,
+      }.ShowDialog();
+    }
   }
 }
