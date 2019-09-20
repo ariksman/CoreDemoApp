@@ -1,7 +1,7 @@
 ﻿using Repository.Core;
 using Repository.Core.DataModel;
 
-namespace CoreDemoApp.Domain
+namespace CoreDemoApp.Domain.ImpureServices
 {
   public class DatabaseSeeder : IDatabaseSeeder
   {
