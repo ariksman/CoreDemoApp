@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Name="FirstRow" Height="*"/>
             <RowDefinition Name="SecondRow" Height="*"/>
+            <RowDefinition Name="ThirdRow" Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Name="FirstColumn" Width="*"/>
@@ -73,5 +74,36 @@
                 Command="{Binding DeleteDatabaseCommand}"
                 Style="{StaticResource ClearButtonStyle}"/>
         </StackPanel>
+
+        <StatusBar Grid.Row="2" Grid.ColumnSpan="6">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem>
+                <TextBlock Name="errorCount" Text="{Binding ItemCount, StringFormat={}{0} of loaded items}"  />
+            </StatusBarItem>
+            <Separator Grid.Column="1" />
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Text="{Binding DatabaseConnectionPath}" />
+            </StatusBarItem>
+            <Separator Grid.Column="3" />
+            <!--<StatusBarItem Grid.Column="4">
+                <Grid>
+                    <ProgressBar Value="{Binding ProgressBarValue}" Width="90" Height="16" Maximum="60"  Name="ProgressBarStatus" IsIndeterminate="{Binding ProgressBarIsIndetermined}"/>
+                    <TextBlock Text="{Binding ElementName=ProgressBarStatus, Path=Value, StringFormat={}{0:0} items}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Grid>
+            </StatusBarItem>-->
+        </StatusBar>
+
     </Grid>
 </Window>
