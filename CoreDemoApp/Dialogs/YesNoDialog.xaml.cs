@@ -8,11 +8,9 @@ namespace CoreDemoApp.Dialogs
   /// </summary>
   public partial class YesNoDialog : Window, IClosable
   {
-    public YesNoDialog(string title, string message)
+    public YesNoDialog()
     {
       InitializeComponent();
-      Title = title;
-      textBlock.Text = message;
     }
 
     private void ButtonYes_Click(object sender, RoutedEventArgs e)

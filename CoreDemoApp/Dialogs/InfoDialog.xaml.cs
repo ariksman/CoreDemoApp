@@ -18,10 +18,9 @@ namespace CoreDemoApp.Dialogs
   /// </summary>
   public partial class InfoDialog : Window, IClosable
   {
-    public InfoDialog(string title)
+    public InfoDialog()
     {
       InitializeComponent();
-      Title = title;
     }
   }
 }

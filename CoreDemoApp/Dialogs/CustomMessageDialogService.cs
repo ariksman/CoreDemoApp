@@ -15,7 +15,10 @@ namespace CoreDemoApp.Dialogs
 
     public void ShowErrorMessage(string sender, string message, string details)
     {
-      new YesNoDialog(message, details)
+      _viewModel.Title = "Error happened!";
+      _viewModel.Message = message;
+
+      new YesNoDialog()
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
@@ -30,8 +33,10 @@ namespace CoreDemoApp.Dialogs
 
     public void ShowUserMessage(string sender, string message)
     {
+      _viewModel.Title = "Status update";
       _viewModel.Message = message;
-      new InfoDialog("Status update")
+
+      new InfoDialog()
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,

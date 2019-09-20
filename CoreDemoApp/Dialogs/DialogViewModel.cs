@@ -6,6 +6,17 @@ namespace CoreDemoApp.Dialogs
 {
   public class DialogViewModel : ViewModelBase
   {
+    private string _title;
+    public string Title
+    {
+      get => _title;
+      set
+      {
+        _title = value;
+        RaisePropertyChanged();
+      }
+    }
+
     private string _message;
     public string Message
     {

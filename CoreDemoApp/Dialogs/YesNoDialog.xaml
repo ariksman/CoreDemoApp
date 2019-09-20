@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CoreDemoApp.Views"
         mc:Ignorable="d"
         ShowInTaskbar="False"
+        Title="{Binding Title}"
         ResizeMode="NoResize" MinWidth="300" SizeToContent="WidthAndHeight">
     <Border BorderBrush="White" BorderThickness="2">
         <Grid>

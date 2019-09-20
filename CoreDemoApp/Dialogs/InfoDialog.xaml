@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:CoreDemoApp.Dialogs"
         x:Name="InfoDialogWindow"
         mc:Ignorable="d"
+        Title="{Binding Title}"
         ShowInTaskbar="False"
         ResizeMode="NoResize" MinWidth="300" SizeToContent="WidthAndHeight">
     <Border BorderBrush="White" BorderThickness="2">
