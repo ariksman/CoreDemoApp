@@ -1,11 +1,12 @@
 ﻿using System.Windows;
+using CoreDemoApp.Application;
 
 namespace CoreDemoApp.Dialogs
 {
   /// <summary>
   /// Interaction logic for InfoDialog.xaml
   /// </summary>
-  public partial class YesNoDialog : Window
+  public partial class YesNoDialog : Window, IClosable
   {
     public YesNoDialog(string title, string message)
     {

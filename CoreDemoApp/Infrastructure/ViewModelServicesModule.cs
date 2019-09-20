@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CoreDemoApp.Dialogs;
 using CoreDemoApp.ViewModels;
 
 namespace CoreDemoApp.Infrastructure
@@ -14,6 +15,7 @@ namespace CoreDemoApp.Infrastructure
 
       //builder.RegisterType<DataSetViewModel>().AsSelf().As<ISharedSettingsContext>().SingleInstance();
       builder.RegisterType<MainViewModel>().AsSelf();
+      builder.RegisterType<DialogViewModel>().AsSelf();
     }
   }
 }

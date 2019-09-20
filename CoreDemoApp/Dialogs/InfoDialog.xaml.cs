@@ -9,17 +9,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CoreDemoApp.Application;
 
 namespace CoreDemoApp.Dialogs
 {
   /// <summary>
   /// Interaction logic for InfoDialog.xaml
   /// </summary>
-  public partial class InfoDialog : Window
+  public partial class InfoDialog : Window, IClosable
   {
-    public InfoDialog()
+    public InfoDialog(string title)
     {
       InitializeComponent();
+      Title = title;
     }
   }
 }

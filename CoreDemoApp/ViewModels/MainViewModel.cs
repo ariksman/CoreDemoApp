@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using AutoMapper;
 using CoreDemoApp.Core.CQS;
@@ -14,19 +15,19 @@ namespace CoreDemoApp.ViewModels
   {
     private readonly ICommandDispatcher _commandDispatcher;
     private readonly IQueryDispatcher _queryDispatcher;
-    private readonly IMessageDialogService _messageDialog;
     private readonly IMapper _mapper;
+    private readonly Func<IMessageDialogService> _messageDialogFunc;
 
     public MainViewModel(
       ICommandDispatcher commandDispatcher, 
       IQueryDispatcher queryDispatcher,
-      IMessageDialogService messageDialog,
-      IMapper mapper)
+      IMapper mapper,
+      Func<IMessageDialogService> messageDialogFunc)
     {
       _commandDispatcher = commandDispatcher;
       _queryDispatcher = queryDispatcher;
-      _messageDialog = messageDialog;
       _mapper = mapper;
+      _messageDialogFunc = messageDialogFunc;
 
       if (IsInDesignMode)
       {
@@ -67,7 +68,8 @@ namespace CoreDemoApp.ViewModels
     {
       var command = new SeedDatabaseCommand(20);
       _commandDispatcher.Dispatch<SeedDatabaseCommand, Result>(command)
-        .OnFailure(details => _messageDialog.ShowErrorMessage(GetType().Name, "Error while seeding database", details));
+        .OnFailure(details => 
+          _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while seeding database", details));
     }
 
     private void LoadDatabaseExecute()
@@ -78,17 +80,8 @@ namespace CoreDemoApp.ViewModels
         {
           Persons = _mapper.Map<ObservableCollection<PersonViewModel>>(result);
           IsChecked = true;
-          _messageDialog.ShowUserMessage(GetType().Name, "");
+          _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {Persons.Count} items");
         });
-      //var workers = new List<Worker>();
-      //using (IUnitOfWork context = ServiceLocator.Current.GetInstance<IUnitOfWork>("LocalDatabase"))
-      //{
-      //  workers = context.Workers?.GetAllWorkersWithEmployers();
-      //}
-
-      //CreatePersonListFromSource(workers);
-
-      //IsChecked = true;
     }
 
     private void CreatePersonListFromSource(IEnumerable<object> source)

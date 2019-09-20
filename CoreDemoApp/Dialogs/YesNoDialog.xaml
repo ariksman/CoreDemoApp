@@ -23,8 +23,12 @@
                         <Setter Property="Width" Value="75"/>
                     </Style>
                 </StackPanel.Resources>
-                <Button Content="Yes" Click="ButtonYes_Click"/>
-                <Button Content="No" Click="ButtonNo_Click"/>
+                <Button Content="Yes" Click="ButtonYes_Click"
+                        Command="{Binding CloseWindowCommand}"
+                        CommandParameter="{Binding ElementName=InfoDialogWindow}"/>
+                <Button Content="No" Click="ButtonNo_Click"
+                        Command="{Binding CloseWindowCommand}"
+                        CommandParameter="{Binding ElementName=InfoDialogWindow}"/>
             </StackPanel>
         </Grid>
     </Border>

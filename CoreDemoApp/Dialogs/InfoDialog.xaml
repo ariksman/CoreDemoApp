@@ -3,10 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:command="http://www.galasoft.ch/mvvmlight"
         xmlns:local="clr-namespace:CoreDemoApp.Dialogs"
+        x:Name="InfoDialogWindow"
         mc:Ignorable="d"
-        Title="InfoDialog" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        ShowInTaskbar="False"
+        ResizeMode="NoResize" MinWidth="300" SizeToContent="WidthAndHeight">
+    <Border BorderBrush="White" BorderThickness="2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="textBlock" Text="{Binding Message}" TextWrapping="Wrap" Margin="5"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="1"
+                        HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="Margin" Value="5"/>
+                        <Setter Property="Width" Value="75"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Content="Ok" 
+                        Command="{Binding CloseWindowCommand}"
+                        CommandParameter="{Binding ElementName=InfoDialogWindow}">
+                    <!-- code below will be supported later when .NET Core gains support for interactivity. Possibly by this nuget package: https://github.com/microsoft/XamlBehaviorsWpf/pull/20 -->
+                    <!--<i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <command:EventToCommand
+                                Command="{Binding CloseWindowCommand}" 
+                                CommandParameter="{Binding ElementName=AboutProgramWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>
