@@ -9,5 +9,6 @@ namespace Repository.Core
         IWorkerRepository Workers { get; }
         int Complete();
         void Migrate();
+        string Connection { get; }
     }
 }
