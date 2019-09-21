@@ -16,7 +16,8 @@ namespace CoreDemoApp.Infrastructure.AutoMapperProfiles
         .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
         .ForMember(dest => dest.WorkPlace, opt => opt.MapFrom(src => src.Employer1.Name))
         .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.Age))
-        .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.WorkerId));
+        .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.WorkerId))
+        .ReverseMap();
     }
   }
 }
