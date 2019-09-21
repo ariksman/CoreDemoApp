@@ -64,5 +64,10 @@ namespace Repository.EFCore
         Console.WriteLine(ex);
       }
     }
+
+    public string Connection
+    {
+      get => _context.Database.ProviderName;
+    }
   }
 }
