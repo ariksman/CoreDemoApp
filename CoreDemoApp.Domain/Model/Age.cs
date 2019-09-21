@@ -15,6 +15,7 @@ namespace CoreDemoApp.Domain.Model
     {
       return ageOrNothing.ToResult("Argument is null")
         .Ensure(value => value >= 0, "Age must be a positive number")
+        .Ensure(value => value < 150, "Maximum age is 150, value must be lower")
         .Map(value => new Age(value));
     }
 
