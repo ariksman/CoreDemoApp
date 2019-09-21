@@ -4,38 +4,10 @@ namespace Repository.Core.DataModel
 {
     public class Employer
     {
-        public Employer()
-        {
-            
-        }
+        public Employer() {}
 
-        private int _employerId;
-        public int EmployerId
-        {
-            get => _employerId;
-            set
-            {
-                if (_employerId == value)
-                {
-                    return;
-                }
-                _employerId = value;
-            }
-        }
-
-        private string _name;
-        public string Name
-        {
-            get => _name;
-            set
-            {
-                if (_name == value)
-                {
-                    return;
-                }
-                _name = value;
-            }
-        }
+        public int EmployerId { get; set; }
+        public string Name { get; set; }
 
         // one-to-many relation for workers
         public virtual ICollection<Worker> Workers { get; set; }
