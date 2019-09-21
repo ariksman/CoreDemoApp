@@ -90,7 +90,7 @@
                 </ItemsPanelTemplate>
             </StatusBar.ItemsPanel>
             <StatusBarItem>
-                <TextBlock Name="errorCount" Text="{Binding ItemCount, StringFormat={}{0} of loaded items}"  />
+                <TextBlock Name="errorCount" Text="{Binding ItemCount, StringFormat={}{0} items loaded}"  />
             </StatusBarItem>
             <Separator Grid.Column="1" />
             <StatusBarItem Grid.Column="2">
