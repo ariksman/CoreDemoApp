@@ -5,6 +5,7 @@ using AutoMapper;
 using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
+using CoreDemoApp.Domain.Model;
 using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
 using Repository.Core.DataModel;
@@ -82,28 +83,40 @@ namespace CoreDemoApp.Views.MainWindow
 
     private void LoadDatabaseExecute()
     {
-      var query = new LoadDataForListViewQuery();
-      _queryDispatcher.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(query)
-        .OnSuccessTry(result =>
+      var loadQuery = new LoadDataForListViewQuery();
+      var databaseInfoQuery = new GetCurrentDatabaseConnectionQuery();
+
+      _queryDispatcher.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(loadQuery)
+        .Tap(result =>
         {
           Persons = _mapper.Map<ObservableCollection<PersonViewModel>>(result);
           IsChecked = true;
           ItemCount = Persons.Count;
-
+        })
+        .Tap(() =>
+        {
+          _queryDispatcher.Dispatch<GetCurrentDatabaseConnectionQuery, Result<string>>(databaseInfoQuery)
+            .OnSuccessTry((data => DatabaseConnectionPath = data));
+        })
+        .OnSuccessTry(result =>
+        {
           _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {Persons.Count} items");
-        });
+        })
+        .OnFailure(details => _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while loading database", details));
     }
 
     private void SaveNewPersonsExecute()
     {
-      //var newPerson = new Person()
-      //{
-      //  Age = _currentPersonAge,
-      //  Name = _currentPersonName,
-      //  Id = _currentPersonId,
-      //};
+      var newPerson = new Person(_currentPersonName, CurrentPersonAge);
+      var command = new AddPersonWithEmployer(_mapper.Map<Worker>(newPerson));
 
-      //Persons.Add(newPerson);
+      _commandDispatcher.Dispatch<AddPersonWithEmployer, Result<int>>(command)
+        .Tap(result =>
+        {
+          newPerson.UpdateId(result);
+          Persons.Add(_mapper.Map<PersonViewModel>(newPerson));
+        })
+        .OnFailure( details => _messageDialogFunc().ShowErrorMessage(GetType().Name, "Failed to add person into database", details));
     }
 
     private void DeleteDatabaseCommandExecute()
@@ -122,6 +135,7 @@ namespace CoreDemoApp.Views.MainWindow
     {
       Persons.Clear();
       SelectedPerson = null;
+      ItemCount = 0;
     }
 
     #endregion
@@ -153,7 +167,7 @@ namespace CoreDemoApp.Views.MainWindow
 
     public string DatabaseConnectionPath
     {
-      get => _databaseConnectionPath;
+      get =>_databaseConnectionPath;
       set
       {
         _databaseConnectionPath = value;
