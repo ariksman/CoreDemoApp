@@ -6,7 +6,7 @@ namespace CoreDemoApp.Domain
 {
   public class RemoveSelectedPersonCommand : ICommand
   {
-    public int? PersonId { get; set; }
+    public int? PersonId { get; }
 
     public RemoveSelectedPersonCommand(int? personId)
     {
