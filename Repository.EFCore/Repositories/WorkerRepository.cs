@@ -25,7 +25,7 @@ namespace Repository.EFCore.Repositories
       return true;
     }
 
-    public bool RemoveWorker(int workerId)
+    public bool RemoveWorker(Guid workerId)
     {
       var localWorker = DatabaseContext.Workers.FirstOrDefault(w => w.WorkerId == workerId);
       DatabaseContext.Workers.Remove(localWorker ?? throw new InvalidOperationException());
