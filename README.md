@@ -1,5 +1,5 @@
 ## Description
-The program is implemented with .NET Core 3.0 preview (3.0.0-rc1-19456-20), follows the MVVM design principle and uses WPF for the user interface. Additionally, code is divided into layers and utilizing onion structure and CQS for use-case implementation.
+The program is implemented with .NET Core 3.0 preview (3.0.0-rc1-19456-20), follows the MVVM design principle and uses WPF for the user interface. Additionally, the code is divided into layers, utilizing onion structure and CQS approach for the use-case implementation.
 
 ## Frameworks
 
