@@ -6,9 +6,9 @@ namespace CoreDemoApp.Domain
 {
   public class RemoveSelectedPersonCommand : ICommand
   {
-    public int? PersonId { get; }
+    public Guid? PersonId { get; }
 
-    public RemoveSelectedPersonCommand(int? personId)
+    public RemoveSelectedPersonCommand(Guid? personId)
     {
       PersonId = personId;
     }
