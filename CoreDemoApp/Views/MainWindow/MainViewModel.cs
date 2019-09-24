@@ -113,7 +113,6 @@ namespace CoreDemoApp.Views.MainWindow
       _commandDispatcher.Dispatch<AddPersonWithEmployer, Result<int>>(command)
         .Tap(result =>
         {
-          newPerson.UpdateId(result);
           Persons.Add(_mapper.Map<PersonViewModel>(newPerson));
         })
         .OnFailure( details => _messageDialogFunc().ShowErrorMessage(GetType().Name, "Failed to add person into database", details));
@@ -215,7 +214,7 @@ namespace CoreDemoApp.Views.MainWindow
 
         if (_selectedPerson == null)
         {
-          CurrentPersonId = 0;
+          CurrentPersonId = Guid.Empty;
           CurrentPersonAge = 0;
           CurrentPersonName = string.Empty;
         }
@@ -230,9 +229,9 @@ namespace CoreDemoApp.Views.MainWindow
       }
     }
 
-    private int _currentPersonId;
+    private Guid _currentPersonId;
 
-    public int CurrentPersonId
+    public Guid CurrentPersonId
     {
       get => _currentPersonId;
       set
