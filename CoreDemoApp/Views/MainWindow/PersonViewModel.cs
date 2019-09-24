@@ -20,7 +20,7 @@ namespace CoreDemoApp.Views.MainWindow
       {
         var newPerson = new PersonViewModel()
         {
-          Id = i,
+          Id = Guid.NewGuid(),
           Name = "test " + i,
           Age = _random.Next(),
         };
@@ -77,8 +77,8 @@ namespace CoreDemoApp.Views.MainWindow
       }
     }
 
-    private int _id;
-    public int Id
+    private Guid _id;
+    public Guid Id
     {
       get => _id;
       set
