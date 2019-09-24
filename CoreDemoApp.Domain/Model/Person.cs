@@ -19,11 +19,6 @@ namespace CoreDemoApp.Domain.Model
         .OnSuccessTry(value => Age = value);
     }
 
-    public void UpdateId(int id)
-    {
-      Id = id;
-    }
-
     public static List<Person> CreatePersonData(int count, Random rnd)
     {
       var persons = new List<Person>();
