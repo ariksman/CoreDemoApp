@@ -1,4 +1,5 @@
-﻿using Repository.Core;
+﻿using System;
+using Repository.Core;
 using Repository.Core.DataModel;
 
 namespace CoreDemoApp.Domain.ImpureServices
@@ -9,22 +10,27 @@ namespace CoreDemoApp.Domain.ImpureServices
     {
       var newEmployer1 = new Employer()
       {
+        EmployerId = Guid.NewGuid(),
         Name = "Fidelix",
       };
       var newEmployer2 = new Employer()
       {
+        EmployerId = Guid.NewGuid(),
         Name = "Nokia",
       };
       var newEmployer3 = new Employer()
       {
+        EmployerId = Guid.NewGuid(),
         Name = "Apple",
       };
       var newEmployer4 = new Employer()
       {
+        EmployerId = Guid.NewGuid(),
         Name = "Siemens",
       };
       var newEmployer5 = new Employer()
       {
+        EmployerId = Guid.NewGuid(),
         Name = "BMW",
       };
 
@@ -38,6 +44,7 @@ namespace CoreDemoApp.Domain.ImpureServices
 
       var newWorker1 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Pekka",
         Age = 22,
         Employer1 = newEmployer1,
@@ -45,54 +52,63 @@ namespace CoreDemoApp.Domain.ImpureServices
 
       var newWorker2 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Jaska",
         Age = 24,
         Employer1 = newEmployer3,
       };
       var newWorker3 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Timo",
         Age = 44,
         Employer1 = newEmployer3,
       };
       var newWorker4 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 55,
         Employer1 = newEmployer2,
       };
       var newWorker5 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 33,
         Employer1 = newEmployer5,
       };
       var newWorker6 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Satu",
         Age = 28,
         Employer1 = newEmployer4,
       };
       var newWorker7 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Taina",
         Age = 32,
         Employer1 = newEmployer4,
       };
       var newWorker8 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Hanna",
         Age = 33,
         Employer1 = newEmployer2,
       };
       var newWorker9 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Sini",
         Age = 33,
         Employer1 = newEmployer5,
       };
       var newWorker10 = new Worker()
       {
+        WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 24,
         Employer1 = newEmployer5,
