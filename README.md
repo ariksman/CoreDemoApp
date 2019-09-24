@@ -1,5 +1,5 @@
 ## Description
-The program is implemented with .NET Core 3.0 preview (3.0.0-rc1-19456-20), follows the MVVM design principle and uses WPF for the user interface. Additionally, the code is divided into layers, utilizing onion structure and CQS approach for the use-case implementation.
+The program is implemented with .NET Core 3.0 preview, follows the MVVM design principle and uses WPF for the user interface. Additionally, the code is divided into layers, utilizing onion structure and CQS approach for the use-case implementation.
 
 ## Frameworks
 
@@ -7,7 +7,7 @@ The program is implemented with .NET Core 3.0 preview (3.0.0-rc1-19456-20), foll
 - Mvvm light [http://www.mvvmlight.net]
 - Autofac [https://autofac.org/]
 - AutoMapper [https://automapper.org]
-- Entity Framework Core 3.0 rc1 [https://docs.microsoft.com/en-us/ef/]
+- Entity Framework Core 3.0.0 rc1-19456-20 [https://docs.microsoft.com/en-us/ef/]
 - SQLite [https://www.sqlite.org/index.html]
 
 #
