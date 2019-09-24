@@ -23,7 +23,7 @@ namespace CoreDemoApp.Application
         // TODO: add employee logic https://blogs.cuttingedge.it/steven/posts/2012/returning-data-from-command-handlers/
         _unitOfWork.Workers.AddWorker(command.Worker);
         _unitOfWork.Complete();
-        return Result.Ok(); //TODO: find a way to use Guids
+        return Result.Ok();
       }
       catch (Exception e)
       {
