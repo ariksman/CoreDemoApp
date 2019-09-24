@@ -7,7 +7,7 @@ The program is implemented with .NET Core 3.0 preview, follows the MVVM design p
 - Mvvm light [http://www.mvvmlight.net]
 - Autofac [https://autofac.org/]
 - AutoMapper [https://automapper.org]
-- Entity Framework Core 3.0.0 rc1-19456-20 [https://docs.microsoft.com/en-us/ef/]
+- Entity Framework Core 3.0.0-rc1-19456-20 [https://docs.microsoft.com/en-us/ef/]
 - SQLite [https://www.sqlite.org/index.html]
 
 #
