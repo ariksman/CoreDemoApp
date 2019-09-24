@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Repository.Core.DataModel
 {
@@ -6,7 +7,7 @@ namespace Repository.Core.DataModel
     {
         public Employer() {}
 
-        public int EmployerId { get; set; }
+        public Guid EmployerId { get; set; }
         public string Name { get; set; }
 
         // one-to-many relation for workers
