@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Repository.Core.DataModel;
 
 namespace Repository.Core.Repositories
@@ -7,7 +8,7 @@ namespace Repository.Core.Repositories
     {
         bool AddWorker(Worker worker);
         bool RemoveWorker(Worker worker);
-        bool RemoveWorker(int workerId);
+        bool RemoveWorker(Guid workerId);
         Employer GetWorkerEmployer(Worker worker);
         List<Worker> GetAllWorkersWithEmployers();
     }
