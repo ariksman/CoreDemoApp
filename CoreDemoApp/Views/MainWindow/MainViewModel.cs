@@ -20,7 +20,7 @@ namespace CoreDemoApp.Views.MainWindow
     private readonly Func<IMessageDialogService> _messageDialogFunc;
 
     public MainViewModel(
-      ICommandDispatcher commandDispatcher, 
+      ICommandDispatcher commandDispatcher,
       IQueryDispatcher queryDispatcher,
       IMapper mapper,
       Func<IMessageDialogService> messageDialogFunc)
@@ -42,7 +42,9 @@ namespace CoreDemoApp.Views.MainWindow
     public RelayCommand ClearPersonsCommand => _clearPersonsCommand ??= new RelayCommand(ClearPersonsCommandExecute);
 
     private RelayCommand _deleteDatabaseCommand;
-    public RelayCommand DeleteDatabaseCommand => _deleteDatabaseCommand ??= new RelayCommand(DeleteDatabaseCommandExecute);
+
+    public RelayCommand DeleteDatabaseCommand =>
+      _deleteDatabaseCommand ??= new RelayCommand(DeleteDatabaseCommandExecute);
 
     private RelayCommand _saveNewPersonsCommand;
     public RelayCommand SaveNewPersonsCommand => _saveNewPersonsCommand ??= new RelayCommand(SaveNewPersonsExecute);
@@ -67,7 +69,8 @@ namespace CoreDemoApp.Views.MainWindow
           Persons.Remove(_selectedPerson);
           ItemCount = Persons.Count;
 
-          _messageDialogFunc().ShowUserMessage(GetType().Name, $"Removed person: {personName}, id: {personId} from database");
+          _messageDialogFunc()
+            .ShowUserMessage(GetType().Name, $"Removed person: {personName}, id: {personId} from database");
         })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, $"Unable to remove {_selectedPerson?.Name}", details));
@@ -77,7 +80,7 @@ namespace CoreDemoApp.Views.MainWindow
     {
       var command = new SeedDatabaseCommand(20);
       _commandDispatcher.Dispatch<SeedDatabaseCommand, Result>(command)
-        .OnFailure(details => 
+        .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while seeding database", details));
     }
 
@@ -100,9 +103,10 @@ namespace CoreDemoApp.Views.MainWindow
         })
         .OnSuccessTry(result =>
         {
-          _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {Persons.Count} items");
+          _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {result.Count} items");
         })
-        .OnFailure(details => _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while loading database", details));
+        .OnFailure(details =>
+          _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while loading database", details));
     }
 
     private void SaveNewPersonsExecute()
@@ -111,21 +115,16 @@ namespace CoreDemoApp.Views.MainWindow
       var command = new AddPersonWithEmployer(_mapper.Map<Worker>(newPerson));
 
       _commandDispatcher.Dispatch<AddPersonWithEmployer, Result>(command)
-        .Tap(() =>
-        {
-          Persons.Add(_mapper.Map<PersonViewModel>(newPerson));
-        })
-        .OnFailure( details => _messageDialogFunc().ShowErrorMessage(GetType().Name, "Failed to add person into database", details));
+        .Tap(() => { Persons.Add(_mapper.Map<PersonViewModel>(newPerson)); })
+        .OnFailure(details =>
+          _messageDialogFunc().ShowErrorMessage(GetType().Name, "Failed to add person into database", details));
     }
 
     private void DeleteDatabaseCommandExecute()
     {
       var command = new RemoveAllDataFromDatabaseCommand();
       _commandDispatcher.Dispatch<RemoveAllDataFromDatabaseCommand, Result>(command)
-        .OnSuccessTry(() =>
-        {
-          _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared");
-        })
+        .OnSuccessTry(() => { _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared"); })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while clearing database", details));
     }
@@ -166,7 +165,7 @@ namespace CoreDemoApp.Views.MainWindow
 
     public string DatabaseConnectionPath
     {
-      get =>_databaseConnectionPath;
+      get => _databaseConnectionPath;
       set
       {
         _databaseConnectionPath = value;
