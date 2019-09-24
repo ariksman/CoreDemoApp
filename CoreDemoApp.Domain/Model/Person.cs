@@ -12,7 +12,7 @@ namespace CoreDemoApp.Domain.Model
     public WorkPlace WorkPlace { get; set; }
     public Age Age { get; set; }
 
-    public Person(string name, int age, int id = 0)
+    public Person(string name, int age)
     {
       Name = name;
       Age.Create(age)
