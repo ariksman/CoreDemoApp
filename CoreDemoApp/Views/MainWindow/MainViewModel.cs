@@ -62,7 +62,7 @@ namespace CoreDemoApp.Views.MainWindow
     {
       var command = new RemoveSelectedPersonCommand(SelectedPerson?.Id);
       _commandDispatcher.Dispatch<RemoveSelectedPersonCommand, Result>(command)
-        .OnSuccessTry(() =>
+        .Tap(() =>
         {
           var personName = _selectedPerson.Name;
           var personId = _selectedPerson.Id;
@@ -99,9 +99,9 @@ namespace CoreDemoApp.Views.MainWindow
         .Tap(() =>
         {
           _queryDispatcher.Dispatch<GetCurrentDatabaseConnectionQuery, Result<string>>(databaseInfoQuery)
-            .OnSuccessTry((data => DatabaseConnectionPath = data));
+            .Tap((data => DatabaseConnectionPath = data));
         })
-        .OnSuccessTry(result =>
+        .Tap(result =>
         {
           _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {result.Count} items");
         })
@@ -124,7 +124,7 @@ namespace CoreDemoApp.Views.MainWindow
     {
       var command = new RemoveAllDataFromDatabaseCommand();
       _commandDispatcher.Dispatch<RemoveAllDataFromDatabaseCommand, Result>(command)
-        .OnSuccessTry(() => { _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared"); })
+        .Tap(() => { _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared"); })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while clearing database", details));
     }
