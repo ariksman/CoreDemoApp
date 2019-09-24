@@ -25,7 +25,7 @@ namespace Repository.Core.Repositories
       Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
       string includeProperties = "");
 
-    TEntity GetById(int id);
+    TEntity GetById(Guid id);
 
     /// <summary>
     /// Implements the ToList() method with AsNoTracking() ! on the TEntity collection.
