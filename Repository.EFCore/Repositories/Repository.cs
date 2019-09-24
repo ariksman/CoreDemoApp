@@ -35,7 +35,7 @@ namespace Repository.EFCore.Repositories
       return orderBy != null ? orderBy(query).ToList() : query.ToList();
     }
 
-    public TEntity GetById(int id)
+    public TEntity GetById(Guid id)
     {
       return DbSet.Find(id);
     }
