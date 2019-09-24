@@ -7,7 +7,7 @@ using Repository.Core;
 
 namespace CoreDemoApp.Application
 {
-  public class AddPersonWithEmployerCommandHandler : ICommandHandler<AddPersonWithEmployer, Result<int>>
+  public class AddPersonWithEmployerCommandHandler : ICommandHandler<AddPersonWithEmployer, Result>
   {
     private readonly IUnitOfWork _unitOfWork;
 
@@ -16,22 +16,22 @@ namespace CoreDemoApp.Application
       _unitOfWork = unitOfWork;
     }
 
-    public Result<int> Handle(AddPersonWithEmployer command)
+    public Result Handle(AddPersonWithEmployer command)
     {
       try
       {
-        // TODO: add employee logic
+        // TODO: add employee logic https://blogs.cuttingedge.it/steven/posts/2012/returning-data-from-command-handlers/
         _unitOfWork.Workers.AddWorker(command.Worker);
         _unitOfWork.Complete();
-        return Result.Ok(command.Worker.WorkerId); //TODO: not the correct way to return id on command
+        return Result.Ok(); //TODO: find a way to use Guids
       }
       catch (Exception e)
       {
-        return Result.Fail<int>(e.Message);
+        return Result.Fail(e.Message);
       }
     }
 
-    public Task<Result<int>> HandleAsync(AddPersonWithEmployer command)
+    public Task<Result> HandleAsync(AddPersonWithEmployer command)
     {
       throw new NotImplementedException();
     }
