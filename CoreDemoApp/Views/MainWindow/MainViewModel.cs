@@ -110,8 +110,8 @@ namespace CoreDemoApp.Views.MainWindow
       var newPerson = new Person(_currentPersonName, CurrentPersonAge);
       var command = new AddPersonWithEmployer(_mapper.Map<Worker>(newPerson));
 
-      _commandDispatcher.Dispatch<AddPersonWithEmployer, Result<int>>(command)
-        .Tap(result =>
+      _commandDispatcher.Dispatch<AddPersonWithEmployer, Result>(command)
+        .Tap(() =>
         {
           Persons.Add(_mapper.Map<PersonViewModel>(newPerson));
         })
