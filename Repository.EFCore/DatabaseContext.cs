@@ -25,7 +25,15 @@ namespace Repository.EFCore
             modelBuilder.Entity<Employer>()
                 .HasMany(employer => employer.Workers)
                 .WithOne(worker => worker.Employer1);
-        }
+
+            modelBuilder.Entity<Worker>()
+              .Property(w => w.WorkerId)
+              .ValueGeneratedNever();
+
+            modelBuilder.Entity<Employer>()
+              .Property(w => w.EmployerId)
+              .ValueGeneratedNever();
+    }
 
     }
 }
