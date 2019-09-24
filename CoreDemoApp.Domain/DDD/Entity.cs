@@ -1,8 +1,10 @@
-﻿namespace CoreDemoApp.Domain.DDD
+﻿using System;
+
+namespace CoreDemoApp.Domain.DDD
 {
   public abstract class Entity
   {
-    public virtual long Id { get; protected set; }
+    public virtual Guid Id { get; protected set; } = Guid.NewGuid();
 
     public override bool Equals(object obj)
     {
@@ -17,7 +19,7 @@
       if (GetType() != other.GetType())
         return false;
 
-      if (Id == 0 || other.Id == 0)
+      if (Id == Guid.Empty || other.Id == Guid.Empty)
         return false;
 
       return Id == other.Id;
