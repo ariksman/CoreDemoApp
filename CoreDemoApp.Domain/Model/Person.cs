@@ -8,9 +8,9 @@ namespace CoreDemoApp.Domain.Model
 {
   public class Person : AggregateRoot
   {
-    public string Name { get; set; }
-    public WorkPlace WorkPlace { get; set; }
-    public Age Age { get; set; }
+    public string Name { get; private set; }
+    public WorkPlace WorkPlace { get; private set; }
+    public Age Age { get; private set; }
 
     public Person(string name, int age)
     {
