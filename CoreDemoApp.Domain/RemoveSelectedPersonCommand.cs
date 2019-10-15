@@ -1,7 +1,7 @@
 ﻿using System;
 using CoreDemoApp.Core.CQS;
 
-namespace CoreDemoApp.Domain.Model.Person
+namespace CoreDemoApp.Domain
 {
   public class RemoveSelectedPersonCommand : ICommand
   {
