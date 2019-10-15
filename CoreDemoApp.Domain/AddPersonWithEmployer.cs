@@ -1,7 +1,7 @@
 ﻿using CoreDemoApp.Core.CQS;
 using Repository.Core.DataModel;
 
-namespace CoreDemoApp.Domain.Model.Person
+namespace CoreDemoApp.Domain
 {
   public class AddPersonWithEmployer : ICommand
   {
