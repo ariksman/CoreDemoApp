@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using AutoMapper;
 using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Dialogs;
@@ -18,21 +19,26 @@ namespace CoreDemoApp.Views.MainWindow
     private readonly IQueryDispatcher _queryDispatcher;
     private readonly IMapper _mapper;
     private readonly Func<IMessageDialogService> _messageDialogFunc;
+    private readonly Func<PersonModel, PersonViewModel> _personViewModelFunc;
 
     public MainViewModel(
       ICommandDispatcher commandDispatcher,
       IQueryDispatcher queryDispatcher,
       IMapper mapper,
-      Func<IMessageDialogService> messageDialogFunc)
+      Func<IMessageDialogService> messageDialogFunc,
+      Func<PersonModel, PersonViewModel> personViewModelFunc)
     {
       _commandDispatcher = commandDispatcher;
       _queryDispatcher = queryDispatcher;
       _mapper = mapper;
       _messageDialogFunc = messageDialogFunc;
+      _personViewModelFunc = personViewModelFunc;
+
+      SelectedPerson = personViewModelFunc(new PersonModel());
 
       if (IsInDesignMode)
       {
-        var persons = new PersonViewModel().CreatePersonData(20);
+        //var persons = new PersonViewModel().CreatePersonData(20);
       }
     }
 
@@ -92,7 +98,11 @@ namespace CoreDemoApp.Views.MainWindow
       _queryDispatcher.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(loadQuery)
         .Tap(result =>
         {
-          Persons = _mapper.Map<ObservableCollection<PersonViewModel>>(result);
+          var personModels = _mapper.Map<List<PersonModel>>(result);
+          foreach (var personModel in personModels)
+          {
+            Persons.Add(_personViewModelFunc(personModel));
+          }
           IsChecked = true;
           ItemCount = Persons.Count;
         })
@@ -111,11 +121,15 @@ namespace CoreDemoApp.Views.MainWindow
 
     private void SaveNewPersonsExecute()
     {
-      var newPerson = new Person(_currentPersonName, CurrentPersonAge);
-      var command = new AddPersonWithEmployer(_mapper.Map<Worker>(newPerson));
+      //var newPerson = new Person(_currentPersonName, CurrentPersonAge);
+      var command = new AddPersonWithEmployer(_mapper.Map<Worker>(SelectedPerson.PersonModel));
 
       _commandDispatcher.Dispatch<AddPersonWithEmployer, Result>(command)
-        .Tap(() => { Persons.Add(_mapper.Map<PersonViewModel>(newPerson)); })
+        .Tap(() =>
+        {
+          var viewModel = _personViewModelFunc(SelectedPerson.PersonModel);
+          Persons.Add(viewModel);
+        })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Failed to add person into database", details));
     }
@@ -140,7 +154,7 @@ namespace CoreDemoApp.Views.MainWindow
 
     #region Public collections
 
-    private ObservableCollection<PersonViewModel> _persons;
+    private ObservableCollection<PersonViewModel> _persons = new ObservableCollection<PersonViewModel>();
 
     public ObservableCollection<PersonViewModel> Persons
     {
@@ -211,71 +225,70 @@ namespace CoreDemoApp.Views.MainWindow
 
         _selectedPerson = value;
 
-        if (_selectedPerson == null)
-        {
-          CurrentPersonId = Guid.Empty;
-          CurrentPersonAge = 0;
-          CurrentPersonName = string.Empty;
-        }
-        else
-        {
-          CurrentPersonId = _selectedPerson.Id;
-          CurrentPersonAge = _selectedPerson.Age;
-          CurrentPersonName = _selectedPerson.Name;
-        }
-
-        NotifyPropertyChanged();
+        //if (_selectedPerson == null)
+        //{
+        //  CurrentPersonId = Guid.Empty;
+        //  CurrentPersonAge = 0;
+        //  CurrentPersonName = string.Empty;
+        //}
+        //else
+        //{
+        //  CurrentPersonId = _selectedPerson.Id;
+        //  CurrentPersonAge = _selectedPerson.Age;
+        //  CurrentPersonName = _selectedPerson.Name;
+        //}
+        RaisePropertyChanged("CurrentPersonId");
+        RaisePropertyChanged("CurrentPersonAge");
+        RaisePropertyChanged("CurrentPersonName");
+        RaisePropertyChanged();
       }
     }
 
-    private Guid _currentPersonId;
 
     public Guid CurrentPersonId
     {
-      get => _currentPersonId;
+      get => SelectedPerson.Id;
       set
       {
-        if (_currentPersonId == value)
+        if (SelectedPerson.Id == value)
         {
           return;
         }
 
-        _currentPersonId = value;
-        NotifyPropertyChanged();
+        SelectedPerson.Id = value;
+        RaisePropertyChanged();
       }
     }
 
-    private int _currentPersonAge;
 
     public int CurrentPersonAge
     {
-      get => _currentPersonAge;
+      get => SelectedPerson.Age;
       set
       {
-        if (_currentPersonAge == value)
+        if (SelectedPerson.Age == value)
         {
           return;
         }
 
-        _currentPersonAge = value;
-        NotifyPropertyChanged();
+        SelectedPerson.Age = value;
+        RaisePropertyChanged();
       }
     }
 
-    private string _currentPersonName;
 
     public string CurrentPersonName
     {
-      get => _currentPersonName;
+      get => SelectedPerson.Name;
       set
       {
-        if (_currentPersonName == value)
+        if (SelectedPerson.Name == value)
         {
           return;
         }
 
-        _currentPersonName = value;
-        NotifyPropertyChanged();
+        SelectedPerson.Name = value;
+        RaisePropertyChanged();
       }
     }
 

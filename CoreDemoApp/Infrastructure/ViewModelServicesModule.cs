@@ -14,6 +14,8 @@ namespace CoreDemoApp.Infrastructure
       //builder.RegisterType<DataCreator>().As<IDataCreator>();
 
       //builder.RegisterType<DataSetViewModel>().AsSelf().As<ISharedSettingsContext>().SingleInstance();
+      builder.RegisterType<PersonModel>().AsSelf();
+      builder.RegisterType<PersonViewModel>().AsSelf();
       builder.RegisterType<MainViewModel>().AsSelf();
       builder.RegisterType<DialogViewModel>().AsSelf();
     }

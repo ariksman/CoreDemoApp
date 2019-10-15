@@ -1,14 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoreDemoApp.Domain.Model;
 
 namespace CoreDemoApp.Views.MainWindow
 {
+  public class PersonModel
+  {
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string WorkPlace { get; set; }
+    public int Age { get; set; }
+
+  }
   public class PersonViewModel : ModelBase
   {
+    public PersonModel PersonModel { get; set; }
     private readonly Random _random;
 
-    public PersonViewModel()
+    public PersonViewModel(PersonModel personModel)
     {
+      PersonModel = personModel;
       _random = new Random();
     }
 
@@ -18,7 +29,7 @@ namespace CoreDemoApp.Views.MainWindow
 
       for (int i = 0; i < count; i++)
       {
-        var newPerson = new PersonViewModel()
+        var newPerson = new PersonViewModel(new PersonModel())
         {
           Id = Guid.NewGuid(),
           Name = "test " + i,
@@ -32,62 +43,58 @@ namespace CoreDemoApp.Views.MainWindow
     }
 
     #region Public properties
-    private string _name;
     public string Name
     {
-      get => _name;
+      get => PersonModel.Name;
       set
       {
-        if (_name == value)
+        if (PersonModel.Name == value)
         {
           return;
         }
-        _name = value;
+        PersonModel.Name = value;
         NotifyPropertyChanged();
       }
     }
 
-    private string _workplace;
     public string WorkPlace
     {
-      get => _workplace;
+      get => PersonModel.WorkPlace;
       set
       {
-        if (_workplace == value)
+        if (PersonModel.WorkPlace == value)
         {
           return;
         }
-        _workplace = value;
+        PersonModel.WorkPlace = value;
         NotifyPropertyChanged();
       }
     }
 
-    private int _age;
     public int Age
     {
-      get => _age;
+      get => PersonModel.Age;
       set
       {
-        if (_age == value)
+        if (PersonModel.Age == value)
         {
           return;
         }
-        _age = value;
+        PersonModel.Age = value;
         NotifyPropertyChanged();
       }
     }
 
-    private Guid _id;
     public Guid Id
     {
-      get => _id;
+      get => PersonModel.Id;
       set
       {
-        if (_id == value)
+        if (PersonModel.Id == value)
         {
           return;
         }
-        _id = value;
+        PersonModel.Id = value;
         NotifyPropertyChanged();
       }
     }
