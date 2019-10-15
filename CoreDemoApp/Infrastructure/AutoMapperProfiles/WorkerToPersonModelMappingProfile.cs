@@ -8,11 +8,11 @@ using Repository.Core.DataModel;
 
 namespace CoreDemoApp.Infrastructure.AutoMapperProfiles
 {
-  public class WorkerToPersonViewModelMappingProfile : Profile
+  public class WorkerToPersonModelMappingProfile : Profile
   {
-    public WorkerToPersonViewModelMappingProfile()
+    public WorkerToPersonModelMappingProfile()
     {
-      CreateMap<Worker, PersonViewModel>()
+      CreateMap<Worker, PersonModel>()
         .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
         .ForMember(dest => dest.WorkPlace, opt => opt.MapFrom(src => src.Employer1.Name))
         .ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.Age))
