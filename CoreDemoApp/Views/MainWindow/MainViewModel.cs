@@ -18,6 +18,7 @@ namespace CoreDemoApp.Views.MainWindow
     private readonly ICommandDispatcher _commandDispatcher;
     private readonly IQueryDispatcher _queryDispatcher;
     private readonly IMapper _mapper;
+    private readonly MainModel _mainModel;
     private readonly Func<IMessageDialogService> _messageDialogFunc;
     private readonly Func<PersonModel, PersonViewModel> _personViewModelFunc;
 
@@ -25,12 +26,14 @@ namespace CoreDemoApp.Views.MainWindow
       ICommandDispatcher commandDispatcher,
       IQueryDispatcher queryDispatcher,
       IMapper mapper,
+      MainModel mainModel,
       Func<IMessageDialogService> messageDialogFunc,
       Func<PersonModel, PersonViewModel> personViewModelFunc)
     {
       _commandDispatcher = commandDispatcher;
       _queryDispatcher = queryDispatcher;
       _mapper = mapper;
+      _mainModel = mainModel;
       _messageDialogFunc = messageDialogFunc;
       _personViewModelFunc = personViewModelFunc;
 
@@ -160,38 +163,33 @@ namespace CoreDemoApp.Views.MainWindow
 
     #region Public properties
 
-    private string _databaseConnectionPath;
-
     public string DatabaseConnectionPath
     {
-      get => _databaseConnectionPath;
+      get => _mainModel.DatabaseConnectionPath;
       set
       {
-        _databaseConnectionPath = value;
+        _mainModel.DatabaseConnectionPath = value;
         NotifyPropertyChanged();
       }
     }
-
-    private int _itemCount;
 
     public int ItemCount
     {
-      get => _itemCount;
+      get => _mainModel.ItemCount;
       set
       {
-        _itemCount = value;
+        _mainModel.ItemCount = value;
         NotifyPropertyChanged();
       }
     }
 
-    private bool _isChecked;
 
     public bool IsChecked
     {
-      get => _isChecked;
+      get => _mainModel.IsChecked;
       set
       {
-        _isChecked = value;
+        _mainModel.IsChecked = value;
         NotifyPropertyChanged();
       }
     }
