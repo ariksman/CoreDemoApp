@@ -154,7 +154,7 @@ namespace CoreDemoApp.Views.MainWindow
 
     #region Public collections
 
-    public ObservableCollection<PersonViewModel> Persons;
+    public ObservableCollection<PersonViewModel> Persons { get; private set; }
 
     #endregion
 
