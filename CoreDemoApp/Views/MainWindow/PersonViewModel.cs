@@ -4,38 +4,29 @@ using CoreDemoApp.Domain.Model;
 
 namespace CoreDemoApp.Views.MainWindow
 {
-  public class PersonModel
-  {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public string WorkPlace { get; set; }
-    public int Age { get; set; }
-
-  }
   public class PersonViewModel : ModelBase
   {
     public PersonModel PersonModel { get; set; }
-    private readonly Random _random;
 
     public PersonViewModel(PersonModel personModel)
     {
       PersonModel = personModel;
-      _random = new Random();
     }
 
-    public List<PersonViewModel> CreatePersonData(int count)
+    public static List<PersonViewModel> CreatePersonData(int count, Func<PersonModel, PersonViewModel> viewModelFunc)
     {
       var persons = new List<PersonViewModel>();
-
+      var rand = new Random();
       for (int i = 0; i < count; i++)
       {
-        var newPerson = new PersonViewModel(new PersonModel())
+        var personModel = new PersonModel()
         {
           Id = Guid.NewGuid(),
           Name = "test " + i,
-          Age = _random.Next(),
+          Age = rand.Next(),
         };
 
+        var newPerson = viewModelFunc(personModel);
         persons.Add(newPerson);
       }
 
