@@ -8,12 +8,10 @@ namespace CoreDemoApp.Infrastructure
   {
     protected override void Load(ContainerBuilder builder)
     {
-      //builder.RegisterType<FileDialogProvider>().As<IFileDialogProvider>();
-      //builder.RegisterType<DataFileReader>().As<IDataFileReader>();
-      //builder.RegisterType<OokiiMessageDialogService>().As<IMessageDialogService>();
       //builder.RegisterType<DataCreator>().As<IDataCreator>();
 
       //builder.RegisterType<DataSetViewModel>().AsSelf().As<ISharedSettingsContext>().SingleInstance();
+      builder.RegisterType<MainModel>().AsSelf();
       builder.RegisterType<PersonModel>().AsSelf();
       builder.RegisterType<PersonViewModel>().AsSelf();
       builder.RegisterType<MainViewModel>().AsSelf();
