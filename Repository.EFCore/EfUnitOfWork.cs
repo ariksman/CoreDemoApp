@@ -10,14 +10,15 @@ namespace Repository.EFCore
   {
     private readonly DatabaseContext _context;
 
-    public EfUnitOfWork(string dataSource = null)
+    public EfUnitOfWork(
+      DatabaseContext context,
+      Func<DatabaseContext, IEmployerRepository> employersRepositoryFunc,
+      Func<DatabaseContext, IWorkerRepository> workerRepositoryFunc
+      )
     {
-      if (dataSource == null) dataSource = DatabaseConnectionFactory.GetInstallDirectory();
-      var options = DatabaseConnectionFactory.CreateConnectionString(dataSource);
-      _context = new DatabaseContext(options);
-
-      Employers = new EmployerRepository(_context);
-      Workers = new WorkerRepository(_context);
+      _context = context;
+      Employers = employersRepositoryFunc(_context);
+      Workers = workerRepositoryFunc(_context);
 
       Migrate();
     }

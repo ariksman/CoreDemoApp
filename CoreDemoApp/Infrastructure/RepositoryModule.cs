@@ -1,4 +1,7 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using Autofac;
+using Autofac.Core;
+using Microsoft.EntityFrameworkCore;
 using Repository.Core;
 using Repository.Core.Repositories;
 using Repository.EFCore;
@@ -10,10 +13,25 @@ namespace CoreDemoApp.Infrastructure
   {
     protected override void Load(ContainerBuilder builder)
     {
+      builder.RegisterType<DatabaseContext>()
+        .WithParameter(
+          new ResolvedParameter(
+            (pi, ctx) => pi.ParameterType == typeof(DbContextOptions) && pi.Name == "options",
+            (pi, ctx) =>
+            {
+              var dataSource = DatabaseConnectionFactory.GetInstallDirectory();
+              return DatabaseConnectionFactory.CreateConnectionString(dataSource);
+            }))
+        .InstancePerLifetimeScope();
+        
+
+      //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+      var repositoriesAssembly = Assembly.GetAssembly(typeof(EmployerRepository));
+      builder.RegisterAssemblyTypes(repositoriesAssembly)
+        .Where(t => t.Name.EndsWith("Repository"))
+        .AsImplementedInterfaces();
+
       builder.RegisterType<EfUnitOfWork>().As<IUnitOfWork>();
-      builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
-      builder.RegisterType<EmployerRepository>().As<IEmployerRepository>();
-      builder.RegisterType<WorkerRepository>().As<IWorkerRepository>();
     }
   }
 }

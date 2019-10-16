@@ -9,7 +9,7 @@ namespace Repository.EFCore.Repositories
 {
   public class WorkerRepository : Repository<Worker>, IWorkerRepository
   {
-    public WorkerRepository(DbContext context) : base(context)
+    public WorkerRepository(DatabaseContext context) : base(context)
     {
     }
 

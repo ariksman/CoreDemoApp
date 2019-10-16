@@ -12,7 +12,7 @@ namespace Repository.EFCore.Repositories
     protected readonly DbContext Context;
     internal DbSet<TEntity> DbSet;
 
-    protected Repository(DbContext context)
+    protected Repository(DatabaseContext context)
     {
       Context = context;
       DbSet = context.Set<TEntity>();
