@@ -34,11 +34,12 @@ namespace CoreDemoApp.Views.MainWindow
       _messageDialogFunc = messageDialogFunc;
       _personViewModelFunc = personViewModelFunc;
 
+      Persons = new ObservableCollection<PersonViewModel>();
       SelectedPerson = personViewModelFunc(new PersonModel());
 
       if (IsInDesignMode)
       {
-        //var persons = new PersonViewModel().CreatePersonData(20);
+        var persons = PersonViewModel.CreatePersonData(20, personViewModelFunc);
       }
     }
 
@@ -121,7 +122,6 @@ namespace CoreDemoApp.Views.MainWindow
 
     private void SaveNewPersonsExecute()
     {
-      //var newPerson = new Person(_currentPersonName, CurrentPersonAge);
       var command = new AddPersonWithEmployer(_mapper.Map<Worker>(SelectedPerson.PersonModel));
 
       _commandDispatcher.Dispatch<AddPersonWithEmployer, Result>(command)
@@ -154,22 +154,7 @@ namespace CoreDemoApp.Views.MainWindow
 
     #region Public collections
 
-    private ObservableCollection<PersonViewModel> _persons = new ObservableCollection<PersonViewModel>();
-
-    public ObservableCollection<PersonViewModel> Persons
-    {
-      get => _persons;
-      set
-      {
-        if (_persons == value)
-        {
-          return;
-        }
-
-        _persons = value;
-        NotifyPropertyChanged();
-      }
-    }
+    public ObservableCollection<PersonViewModel> Persons;
 
     #endregion
 
