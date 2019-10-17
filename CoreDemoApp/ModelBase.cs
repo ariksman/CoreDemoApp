@@ -19,17 +19,10 @@ namespace CoreDemoApp
     /// <summary>
     /// See <a href="http://jesseliberty.com/2012/06/28/c-5making-inotifypropertychanged-easier/">this link</a> for more information.
     /// </summary>
-    /// <param name="message"></param>
     /// <param name="caller"></param>
-    protected void NotifyPropertyChanged(Action<bool> message = null, [CallerMemberName] string caller = "")
+    protected void NotifyPropertyChanged([CallerMemberName] string caller = "")
     {
-      if (PropertyChanged != null)
-      {
-        // property changed
-        PropertyChanged(this, new PropertyChangedEventArgs(caller));
-        // send app message (mvvm light toolkit)
-        message?.Invoke(this.IsValid);
-      }
+      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
     }
 
     /// <summary>
