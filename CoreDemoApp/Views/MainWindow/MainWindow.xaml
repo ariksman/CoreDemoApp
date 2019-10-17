@@ -40,6 +40,7 @@
       Grid.Column="1"
       Margin="10,10,0,10"
       AutoGenerateColumns="False"
+      HeadersVisibility="Column"
       ItemsSource="{Binding Persons}"
       SelectedItem="{Binding SelectedPerson}">
       <DataGrid.Columns>
