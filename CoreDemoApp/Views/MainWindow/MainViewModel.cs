@@ -208,22 +208,10 @@ namespace CoreDemoApp.Views.MainWindow
 
         _selectedPerson = value;
 
-        //if (_selectedPerson == null)
-        //{
-        //  CurrentPersonId = Guid.Empty;
-        //  CurrentPersonAge = 0;
-        //  CurrentPersonName = string.Empty;
-        //}
-        //else
-        //{
-        //  CurrentPersonId = _selectedPerson.Id;
-        //  CurrentPersonAge = _selectedPerson.Age;
-        //  CurrentPersonName = _selectedPerson.Name;
-        //}
-        RaisePropertyChanged("CurrentPersonId");
-        RaisePropertyChanged("CurrentPersonAge");
-        RaisePropertyChanged("CurrentPersonName");
-        RaisePropertyChanged();
+        NotifyPropertyChanged("CurrentPersonId");
+        NotifyPropertyChanged("CurrentPersonAge");
+        NotifyPropertyChanged("CurrentPersonName");
+        NotifyPropertyChanged();
       }
     }
 
@@ -239,7 +227,7 @@ namespace CoreDemoApp.Views.MainWindow
         }
 
         SelectedPerson.Id = value;
-        RaisePropertyChanged();
+        NotifyPropertyChanged();
       }
     }
 
@@ -255,7 +243,7 @@ namespace CoreDemoApp.Views.MainWindow
         }
 
         SelectedPerson.Age = value;
-        RaisePropertyChanged();
+        NotifyPropertyChanged();
       }
     }
 
@@ -271,7 +259,7 @@ namespace CoreDemoApp.Views.MainWindow
         }
 
         SelectedPerson.Name = value;
-        RaisePropertyChanged();
+        NotifyPropertyChanged();
       }
     }
 
