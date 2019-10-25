@@ -50,7 +50,7 @@ namespace CoreDemoApp.Tests
     }
 
     [Fact]
-    public void ClearPersonsCommand_When_Called_SelectenPerson_Is_Set_To_Null()
+    public void ClearPersonsCommand_When_Called_SelectedPerson_Is_Set_To_Null()
     {
       var messageFunc = new Func<IMessageDialogService>(() => _messageDialogMock.Object);
       var personViewModelFunc = new Func<PersonModel, PersonViewModel>(model => new PersonViewModel(new PersonModel()));
