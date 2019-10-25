@@ -54,7 +54,6 @@ namespace CoreDemoApp.Tests
     {
       var messageFunc = new Func<IMessageDialogService>(() => _messageDialogMock.Object);
       var personViewModelFunc = new Func<PersonModel, PersonViewModel>(model => new PersonViewModel(new PersonModel()));
-
       var viewModel = new MainViewModel(
         _commandDispatcherMock.Object,
         _queryDispatcherMock.Object,
@@ -76,7 +75,6 @@ namespace CoreDemoApp.Tests
       var personViewModel =  new PersonViewModel(personModel);
       var messageFunc = new Func<IMessageDialogService>(() => _messageDialogMock.Object);
       var personViewModelFunc = new Func<PersonModel, PersonViewModel>(model => personViewModel);
-
       _queryDispatcherMock.Setup(m =>
           m.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(It.IsAny<LoadDataForListViewQuery>()))
         .Returns(Result.Ok(new List<Worker>()));
@@ -96,7 +94,6 @@ namespace CoreDemoApp.Tests
       viewModel.LoadDatabaseCommand.Execute(null);
 
       Assert.Contains(personViewModel, viewModel.Persons);
-
     }
   }
 }
