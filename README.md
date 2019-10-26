@@ -12,6 +12,7 @@ The program is implemented with .NET Core 3.0 preview, follows the MVVM design p
 - AutoMapper [https://automapper.org]
 - Entity Framework Core 3.0.0-rc1-19456-20 [https://docs.microsoft.com/en-us/ef/]
 - SQLite [https://www.sqlite.org/index.html]
+- Functional Extensions for C# [https://github.com/vkhorikov/CSharpFunctionalExtensions]
 
 #
 
