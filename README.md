@@ -4,7 +4,7 @@ The program is implemented with .NET Core 3.0 preview, follows the MVVM design p
 ## Architecture
 <img src="https://github.com/ariksman/CoreDemoApp/blob/master/Structure.PNG" />
 
-## Frameworks
+## Third party components
 
 - .NET Core 3.0 [https://docs.microsoft.com/en-us/dotnet/core/]
 - Mvvm light [http://www.mvvmlight.net]
