@@ -48,11 +48,12 @@ $testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Rec
 
 $i = 0
 ForEach ($folder in $testDirs) { 
-    echo "Testing $folder.FullName"
+    echo "Testing $folder"
 
     $i++
     $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
 
+    echo "Testing $folder.FullName"
     exec { & dotnet test $folder.FullName -c Release --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutput=$root /p:MergeWith=$root\coverage.json /p:Include="[*]CoreDemoApp.*" $format }
 }
 
