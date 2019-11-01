@@ -6,7 +6,7 @@ before_build:
 - choco install codecov
 
 build:
-  project: CodecovProject.sln
+  project: CoreDemoApp.sln
   verbosity: minimal
 
 test_script:
