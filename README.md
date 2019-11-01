@@ -1,4 +1,8 @@
+
+
 ## Description
+[![Build status](https://ci.appveyor.com/api/projects/status/yxx2x6hdoos31kwe?svg=true)](https://ci.appveyor.com/project/ariksman/coredemoapp)
+
 The program is implemented with .NET Core 3.0 preview, follows the MVVM design principle and uses WPF for the user interface. Additionally, the code is divided into layers, utilizing onion structure and CQS approach for the use-case implementation.
 
 ## Architecture
