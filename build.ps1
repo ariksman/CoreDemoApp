@@ -23,6 +23,10 @@ $commitHash = $(git rev-parse --short HEAD)
 $buildSuffix = @{ $true = "$($suffix)-$($commitHash)"; $false = "$($branch)-$($commitHash)" }[$suffix -ne ""]
 $versionSuffix = @{ $true = "--version-suffix=$($suffix)"; $false = ""}[$suffix -ne ""]
 
+# Debug info
+echo "`n`n----- INFO -----`n"
+
+echo "Root: $root"
 echo "Branch: $branch"
 echo "Revision: $revision"
 echo "Build: Package version suffix is $suffix"
