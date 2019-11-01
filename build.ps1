@@ -58,8 +58,3 @@ ForEach ($folder in $testDirs) {
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
-
-# Pack
-echo "`n`n----- PACK -----`n"
-
-exec { & dotnet pack -c Release -o $artifactsPath --include-symbols --no-build $versionSuffix }
