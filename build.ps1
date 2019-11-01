@@ -38,9 +38,9 @@ echo "`n`n----- TEST -----`n"
 
 exec { & dotnet tool install --global coverlet.console }
 
-$testDirs  = @(Get-ChildItem -Path tests -Include "*.Tests" -Directory -Recurse)
-$testDirs += @(Get-ChildItem -Path tests -Include "*.IntegrationTests" -Directory -Recurse)
-$testDirs += @(Get-ChildItem -Path tests -Include "*FunctionalTests" -Directory -Recurse)
+$testDirs  = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
+$testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -Recurse)
+$testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Recurse)
 
 $i = 0
 ForEach ($folder in $testDirs) { 
