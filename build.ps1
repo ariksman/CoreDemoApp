@@ -48,7 +48,7 @@ $testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Rec
 
 $i = 0
 ForEach ($folder in $testDirs) { 
-    echo "Testing $folder"
+    echo "Testing $folder.FullName"
 
     $i++
     $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
