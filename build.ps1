@@ -1,4 +1,4 @@
-# Originally taken from https://github.com/jbogard/MediatR and https://github.com/psake/psake
+# Originally taken from https://github.com/jbogard/MediatR
 
 function Exec {
     [CmdletBinding()]
@@ -51,10 +51,11 @@ ForEach ($folder in $testDirs) {
     echo "Testing $folder"
 
     $i++
-    $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
-
-    exec { & dotnet test $folder.FullName -c Release --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutput=$root\coverage /p:MergeWith=$root\coverage.json $format }
+    $format = @{ $true = "--format opencover"; $false = ""}[$i -eq $testDirs.Length ]
+    exec {coverlet $folder.FullName --target "dotnet" --targetargs "test --no-build" --merge-with "$root\coverage.json" $format}
+    #exec { & dotnet test $folder.FullName -c Release --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutput=$root\coverage /p:MergeWith=$root\coverage.json $format }
 }
+
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
