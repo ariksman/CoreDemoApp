@@ -8,7 +8,3 @@ before_build:
 build_script:
 - ps: .\build.ps1
 test: off
-
-test_script:
-- OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:".\CoreDemoApp.Tests\bin\Debug\CoreDemoApp.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[CoreDemoApp.Tests*]*" -output:".\MyProject_coverage.xml"
-- codecov -f "MyProject_coverage.xml"
