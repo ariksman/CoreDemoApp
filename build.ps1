@@ -51,8 +51,8 @@ ForEach ($folder in $testDirs) {
     echo "Testing $folder"
 
     $i++
-    $format = @{ $true = "--format opencover"; $false = ""}[$i -eq $testDirs.Length ]
-    exec { & coverlet $folder.FullName --target "dotnet" --targetargs "test --no-build" --merge-with "$root\coverage.json" $format}
+    $format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
+    exec { & coverlet $folder.FullName -t "dotnet" -a "test --no-build" --merge-with "$root\coverage.json" $format}
 }
 
 choco install codecov --no-progress
