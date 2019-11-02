@@ -59,7 +59,7 @@ ForEach ($folder in $testDirs) {
     exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
     $lastFolder = $folder
 }
-exec { & coverlet $lastFolder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json" -f opencover}
+exec { & coverlet $lastFolder.FullName -t "dotnet" -a "test -c Release --no-build" -f opencover}
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
