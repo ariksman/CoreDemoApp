@@ -1,4 +1,4 @@
-# Originally taken from https://github.com/jbogard/MediatR
+# Originally taken from https://github.com/jbogard/MediatR and https://github.com/connellw/Firestorm/blob/master/build.ps1
 
 function Exec {
     [CmdletBinding()]
