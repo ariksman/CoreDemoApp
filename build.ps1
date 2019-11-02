@@ -47,6 +47,7 @@ $testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -R
 $testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Recurse)
 
 $i = 0
+$lastFolder
 ForEach ($folder in $testDirs) { 
     echo "Testing $folder"
 
@@ -55,8 +56,10 @@ ForEach ($folder in $testDirs) {
     $format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
     
     #exec { & dotnet test $folder.FullName -c Release --no-build /p:CoverletOutput='$root\coverage' /p:MergeWith='$root\coverage.json' /p:Include="[*]*" $format}
-    exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json" $format}
+    exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
+    $lastFolder = $folder
 }
+exec { & coverlet $lastFolder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json" -f opencover}
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
