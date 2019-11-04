@@ -1,23 +1,25 @@
 ﻿using System.Threading.Tasks;
 using Autofac;
+using Autofac.Core.Lifetime;
 using CSharpFunctionalExtensions;
 
 namespace CoreDemoApp.Core.CQS
 {
   public class CommandDispatcher : ICommandDispatcher
   {
-    private readonly ILifetimeScope _scope;
+    private readonly LifetimeScope _scope;
 
     public CommandDispatcher(ILifetimeScope scope)
     {
-      _scope = scope;
+      _scope = scope as LifetimeScope;
     }
 
     public TResult Dispatch<TCommand, TResult>(TCommand command)
       where TCommand : ICommand
       where TResult : IResult
     {
-      var handler = _scope.Resolve<ICommandHandler<TCommand, TResult>>();
+      using var childScope = _scope.RootLifetimeScope.BeginLifetimeScope();
+      var handler = childScope.Resolve<ICommandHandler<TCommand, TResult>>();
       return handler.Handle(command);
     }
 
@@ -25,7 +27,8 @@ namespace CoreDemoApp.Core.CQS
       where TCommand : ICommand
       where TResult : IResult
     {
-      var handler = _scope.Resolve<ICommandHandler<TCommand, TResult>>();
+      using var childScope = _scope.RootLifetimeScope.BeginLifetimeScope();
+      var handler = childScope.Resolve<ICommandHandler<TCommand, TResult>>();
       return handler.HandleAsync(command);
     }
   }
