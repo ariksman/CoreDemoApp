@@ -24,7 +24,6 @@ namespace CoreDemoApp.Infrastructure
       //  .Where(t => t.IsClosedTypeOf(typeof(IValidator<>)))
       //  .AsImplementedInterfaces();
 
-
       builder.Register<ServiceFactory>(context =>
       {
         var componentContext = context.Resolve<IComponentContext>();
@@ -34,13 +33,11 @@ namespace CoreDemoApp.Infrastructure
       //builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));
       //builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).As(typeof(IPipelineBehavior<,>));
       //builder.RegisterGeneric(typeof(TransactionBehaviour<,>)).As(typeof(IPipelineBehavior<,>));
-
     }
   }
 
   public class HandlerAutoFacModule : Autofac.Module
   {
-
     private readonly IEnumerable<Assembly> _assembliesToScan;
 
     public HandlerAutoFacModule(IEnumerable<Assembly> assembliesToScan)
@@ -49,7 +46,6 @@ namespace CoreDemoApp.Infrastructure
     }
 
     public HandlerAutoFacModule(params Assembly[] assembliesToScan) : this((IEnumerable<Assembly>)assembliesToScan) { }
-
 
     protected override void Load(ContainerBuilder builder)
     {
