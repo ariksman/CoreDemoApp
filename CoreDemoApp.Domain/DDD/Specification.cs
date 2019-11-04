@@ -4,15 +4,7 @@ using System.Linq.Expressions;
 
 namespace CoreDemoApp.Domain.DDD
 {
-    internal sealed class IdentitySpecification<T> : Specification<T>
-    {
-        public override Expression<Func<T, bool>> ToExpression()
-        {
-            return x => true;
-        }
-    }
-
-    public abstract class Specification<T>
+  public abstract class Specification<T>
     {
         public static readonly Specification<T> All = new IdentitySpecification<T>();
 
