@@ -53,7 +53,7 @@ ForEach ($folder in $testDirs) {
     $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
     #$format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
     
-    exec { & dotnet test $folder.FullName -c Release --no-build /p:CollectCoverage=true /p:MergeWith=$root\coverage.json $format}
+    exec { & dotnet test $folder.FullName -c Release --no-build /p:CollectCoverage=true /p:CoverletOutput=$root /p:MergeWith=$root\coverage.json $format}
     #exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
 }
 
