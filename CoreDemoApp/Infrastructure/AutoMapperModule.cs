@@ -9,7 +9,6 @@ namespace CoreDemoApp.Infrastructure
 {
   public class AutoMapperModule : Autofac.Module
   {
-
     private readonly IEnumerable<Assembly> _assembliesToScan;
 
     public AutoMapperModule(IEnumerable<Assembly> assembliesToScan)
