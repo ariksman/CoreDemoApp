@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using CoreDemoApp.Core.DDD;
 
-namespace CoreDemoApp.Domain.DDD
+namespace CoreDemoApp.Core.DDD
 {
   /// <summary> An aggregate root base class.
   /// Explicitly mark aggregate roots and implement their common logic

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace CoreDemoApp.Domain.DDD.Specifications
+namespace CoreDemoApp.Core.DDD.Specifications
 {
   internal sealed class NotSpecification<T> : Specification<T>
   {

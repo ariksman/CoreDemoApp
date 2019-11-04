@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CoreDemoApp.Domain.DDD
+namespace CoreDemoApp.Core.DDD
 {
   // 
   /// <summary>

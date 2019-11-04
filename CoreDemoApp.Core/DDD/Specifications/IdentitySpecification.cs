@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace CoreDemoApp.Domain.DDD.Specifications
+namespace CoreDemoApp.Core.DDD.Specifications
 {
   internal sealed class IdentitySpecification<T> : Specification<T>
   {
