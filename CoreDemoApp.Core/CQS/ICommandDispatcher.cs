@@ -15,7 +15,6 @@ namespace CoreDemoApp.Core.CQS
       where TCommand : ICommand
       where TResult : IResult;
 
-
     /// <summary>
     ///   Dispatches an async command to its handler
     /// </summary>
