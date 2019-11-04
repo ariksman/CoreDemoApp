@@ -1,0 +1,3195 @@
+{
+  "CoreDemoApp.Application.dll": {
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\AddPersonWithEmployerCommandHandler.cs": {
+      "CoreDemoApp.Application.AddPersonWithEmployerCommandHandler": {
+        "CSharpFunctionalExtensions.Result CoreDemoApp.Application.AddPersonWithEmployerCommandHandler::Handle(CoreDemoApp.Domain.AddPersonWithEmployer)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "30": 0,
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result> CoreDemoApp.Application.AddPersonWithEmployerCommandHandler::HandleAsync(CoreDemoApp.Domain.AddPersonWithEmployer)": {
+          "Lines": {
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.AddPersonWithEmployerCommandHandler::.ctor(Repository.Core.IUnitOfWork)": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\GetCurrentDatabaseConnectionQueryHandler.cs": {
+      "CoreDemoApp.Application.GetCurrentDatabaseConnectionQueryHandler": {
+        "CSharpFunctionalExtensions.Result`1<System.String> CoreDemoApp.Application.GetCurrentDatabaseConnectionQueryHandler::Handle(CoreDemoApp.Domain.GetCurrentDatabaseConnectionQuery)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "29": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result`1<System.String>> CoreDemoApp.Application.GetCurrentDatabaseConnectionQueryHandler::HandleAsync(CoreDemoApp.Domain.GetCurrentDatabaseConnectionQuery)": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.GetCurrentDatabaseConnectionQueryHandler::.ctor(Repository.Core.IUnitOfWork)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\LoadDataForListViewQueryHandler.cs": {
+      "CoreDemoApp.Application.LoadDataForListViewQueryHandler": {
+        "CSharpFunctionalExtensions.Result`1<System.Collections.Generic.List`1<Repository.Core.DataModel.Worker>> CoreDemoApp.Application.LoadDataForListViewQueryHandler::Handle(CoreDemoApp.Domain.LoadDataForListViewQuery)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "31": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result`1<System.Collections.Generic.List`1<Repository.Core.DataModel.Worker>>> CoreDemoApp.Application.LoadDataForListViewQueryHandler::HandleAsync(CoreDemoApp.Domain.LoadDataForListViewQuery)": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.LoadDataForListViewQueryHandler::.ctor(Repository.Core.IUnitOfWork)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\RemoveAllDataFromDatabaseCommandHandler.cs": {
+      "CoreDemoApp.Application.RemoveAllDataFromDatabaseCommandHandler": {
+        "CSharpFunctionalExtensions.Result CoreDemoApp.Application.RemoveAllDataFromDatabaseCommandHandler::Handle(CoreDemoApp.Domain.RemoveAllDataFromDatabaseCommand)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "31": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result> CoreDemoApp.Application.RemoveAllDataFromDatabaseCommandHandler::HandleAsync(CoreDemoApp.Domain.RemoveAllDataFromDatabaseCommand)": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.RemoveAllDataFromDatabaseCommandHandler::.ctor(Repository.Core.IUnitOfWork)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\RemoveSelectedPersonCommandHandler.cs": {
+      "CoreDemoApp.Application.RemoveSelectedPersonCommandHandler": {
+        "CSharpFunctionalExtensions.Result CoreDemoApp.Application.RemoveSelectedPersonCommandHandler::Handle(CoreDemoApp.Domain.RemoveSelectedPersonCommand)": {
+          "Lines": {
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "32": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 23,
+              "Offset": 14,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result> CoreDemoApp.Application.RemoveSelectedPersonCommandHandler::HandleAsync(CoreDemoApp.Domain.RemoveSelectedPersonCommand)": {
+          "Lines": {
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.RemoveSelectedPersonCommandHandler::.ctor(Repository.Core.IUnitOfWork)": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Application\\SeedDatabaseCommandHandler.cs": {
+      "CoreDemoApp.Application.SeedDatabaseCommandHandler": {
+        "CSharpFunctionalExtensions.Result CoreDemoApp.Application.SeedDatabaseCommandHandler::Handle(CoreDemoApp.Domain.SeedDatabaseCommand)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "32": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<CSharpFunctionalExtensions.Result> CoreDemoApp.Application.SeedDatabaseCommandHandler::HandleAsync(CoreDemoApp.Domain.SeedDatabaseCommand)": {
+          "Lines": {
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Application.SeedDatabaseCommandHandler::.ctor(Repository.Core.IUnitOfWork,CoreDemoApp.Domain.ImpureServices.IDatabaseSeeder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "CoreDemoApp.Core.dll": {
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Core\\DDD\\BaseDomainEvent.cs": {
+      "CoreDemoApp.Core.DDD.BaseDomainEvent": {
+        "System.DateTime CoreDemoApp.Core.DDD.BaseDomainEvent::get_DateOccurred()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Core\\DDD\\DomainEventDispatcher.cs": {
+      "CoreDemoApp.Core.DDD.DomainEventDispatcher": {
+        "System.Void CoreDemoApp.Core.DDD.DomainEventDispatcher::Dispatch(CoreDemoApp.Core.DDD.BaseDomainEvent)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "28": 0,
+            "30": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 162,
+              "EndOffset": 144,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 162,
+              "EndOffset": 164,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Core.DDD.DomainEventDispatcher::.ctor(Autofac.ILifetimeScope)": {
+          "Lines": {
+            "13": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "CoreDemoApp.Core.DDD.DomainEventDispatcher/DomainEventHandler`1": {
+        "System.Void CoreDemoApp.Core.DDD.DomainEventDispatcher/DomainEventHandler`1::Handle(CoreDemoApp.Core.DDD.BaseDomainEvent)": {
+          "Lines": {
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Core.DDD.DomainEventDispatcher/DomainEventHandler`1::.ctor(CoreDemoApp.Core.DDD.IHandle`1<T>)": {
+          "Lines": {
+            "42": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Core\\CQS\\CommandDispatcher.cs": {
+      "CoreDemoApp.Core.CQS.CommandDispatcher": {
+        "TResult CoreDemoApp.Core.CQS.CommandDispatcher::Dispatch(TCommand)": {
+          "Lines": {
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<TResult> CoreDemoApp.Core.CQS.CommandDispatcher::DispatchAsync(TCommand)": {
+          "Lines": {
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Core.CQS.CommandDispatcher::.ctor(Autofac.ILifetimeScope)": {
+          "Lines": {
+            "11": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp.Core\\CQS\\QueryDispatcher.cs": {
+      "CoreDemoApp.Core.CQS.QueryDispatcher": {
+        "TResult CoreDemoApp.Core.CQS.QueryDispatcher::Dispatch(TQuery)": {
+          "Lines": {
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<TResult> CoreDemoApp.Core.CQS.QueryDispatcher::DispatchAsync(TQuery)": {
+          "Lines": {
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Core.CQS.QueryDispatcher::.ctor(Autofac.ILifetimeScope)": {
+          "Lines": {
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "CoreDemoApp.dll": {
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\App.xaml.cs": {
+      "CoreDemoApp.App": {
+        "System.Void CoreDemoApp.App::App_OnStartup(System.Object,System.Windows.StartupEventArgs)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.App::TaskScheduler_UnobservedTaskException(System.Object,System.Threading.Tasks.UnobservedTaskExceptionEventArgs)": {
+          "Lines": {
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.App::Current_DispatcherUnhandledException(System.Object,System.Windows.Threading.DispatcherUnhandledExceptionEventArgs)": {
+          "Lines": {
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.App::CurrentDomain_UnhandledException(System.Object,System.UnhandledExceptionEventArgs)": {
+          "Lines": {
+            "44": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\obj\\Release\\netcoreapp3.0\\App.g.cs": {
+      "CoreDemoApp.App": {
+        "System.Void CoreDemoApp.App::InitializeComponent()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "54": 0
+          },
+          "Branches": [
+            {
+              "Line": 51,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 6,
+              "EndOffset": 9,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\App.xaml": {
+      "CoreDemoApp.App": {
+        "System.Void CoreDemoApp.App::InitializeComponent()": {
+          "Lines": {
+            "1": 0,
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\DebugTraceListener.cs": {
+      "CoreDemoApp.DebugTraceListener": {
+        "System.Void CoreDemoApp.DebugTraceListener::Write(System.String)": {
+          "Lines": {
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.DebugTraceListener::WriteLine(System.String)": {
+          "Lines": {
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\ModelBase.cs": {
+      "CoreDemoApp.ModelBase": {
+        "System.Void CoreDemoApp.ModelBase::NotifyPropertyChanged(System.String)": {
+          "Lines": {
+            "25": 29,
+            "26": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 29
+            },
+            {
+              "Line": 25,
+              "Offset": 7,
+              "EndOffset": 11,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.ModelBase::UpdateAllBindings()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 11,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.IEnumerable CoreDemoApp.ModelBase::GetErrors(System.String)": {
+          "Lines": {
+            "46": 0,
+            "47": 0
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 1,
+              "EndOffset": 3,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 1,
+              "EndOffset": 5,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 17,
+              "EndOffset": 21,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean CoreDemoApp.ModelBase::get_HasErrors()": {
+          "Lines": {
+            "57": 0,
+            "58": 0
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 6,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.ModelBase::set_HasErrors(System.Boolean)": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean CoreDemoApp.ModelBase::get_IsValid()": {
+          "Lines": {
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.ModelBase::set_IsValid(System.Boolean)": {
+          "Lines": {
+            "69": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.ModelBase::AddError(System.String,System.String)": {
+          "Lines": {
+            "75": 0,
+            "76": 0,
+            "77": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.ModelBase::RemoveError(System.String)": {
+          "Lines": {
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0
+          },
+          "Branches": [
+            {
+              "Line": 82,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 82,
+              "Offset": 12,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.ModelBase::NotifyErrorsChanged(System.String)": {
+          "Lines": {
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": [
+            {
+              "Line": 90,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 90,
+              "Offset": 6,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.ModelBase::.ctor()": {
+          "Lines": {
+            "40": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\ViewModelLocator.cs": {
+      "CoreDemoApp.ViewModelLocator": {
+        "CoreDemoApp.ViewModelLocator CoreDemoApp.ViewModelLocator::get_Instance()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 6,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.ViewModelLocator::RegisterServices()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<System.Reflection.Assembly> CoreDemoApp.ViewModelLocator::GetAllProgramAssemblies()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0
+          },
+          "Branches": []
+        },
+        "CoreDemoApp.Views.MainWindow.MainViewModel CoreDemoApp.ViewModelLocator::get_MainViewModel()": {
+          "Lines": {
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.ViewModelLocator::.ctor()": {
+          "Lines": {
+            "26": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\MainModel.cs": {
+      "CoreDemoApp.Views.MainWindow.MainModel": {
+        "System.String CoreDemoApp.Views.MainWindow.MainModel::get_DatabaseConnectionPath()": {
+          "Lines": {
+            "5": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 CoreDemoApp.Views.MainWindow.MainModel::get_ItemCount()": {
+          "Lines": {
+            "6": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean CoreDemoApp.Views.MainWindow.MainModel::get_IsChecked()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\MainViewModel.cs": {
+      "CoreDemoApp.Views.MainWindow.MainViewModel": {
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_ClearPersonsCommand()": {
+          "Lines": {
+            "52": 2
+          },
+          "Branches": [
+            {
+              "Line": 52,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 52,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_DeleteDatabaseCommand()": {
+          "Lines": {
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_SaveNewPersonsCommand()": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": [
+            {
+              "Line": 60,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_LoadDatabaseCommand()": {
+          "Lines": {
+            "63": 1
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_SeedDatabaseCommand()": {
+          "Lines": {
+            "66": 0
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand CoreDemoApp.Views.MainWindow.MainViewModel::get_DeletePersonCommand()": {
+          "Lines": {
+            "69": 0
+          },
+          "Branches": [
+            {
+              "Line": 69,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 69,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::DeletePersonExecute()": {
+          "Lines": {
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0
+          },
+          "Branches": [
+            {
+              "Line": 73,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 7,
+              "EndOffset": 21,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::SeedDatabaseExecute()": {
+          "Lines": {
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::LoadDatabaseExecute()": {
+          "Lines": {
+            "99": 1,
+            "100": 1,
+            "102": 1,
+            "103": 1,
+            "104": 1,
+            "105": 2,
+            "106": 5,
+            "107": 1,
+            "108": 2,
+            "109": 1,
+            "110": 2,
+            "111": 2,
+            "112": 2,
+            "113": 1,
+            "114": 1,
+            "115": 2,
+            "116": 3,
+            "117": 2,
+            "118": 1,
+            "119": 1,
+            "120": 2,
+            "121": 2,
+            "122": 1,
+            "123": 1,
+            "124": 1
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::SaveNewPersonsExecute()": {
+          "Lines": {
+            "128": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::DeleteDatabaseCommandExecute()": {
+          "Lines": {
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::ClearPersonsCommandExecute()": {
+          "Lines": {
+            "151": 2,
+            "152": 2,
+            "153": 2,
+            "154": 2
+          },
+          "Branches": []
+        },
+        "System.Collections.ObjectModel.ObservableCollection`1<CoreDemoApp.Views.MainWindow.PersonViewModel> CoreDemoApp.Views.MainWindow.MainViewModel::get_Persons()": {
+          "Lines": {
+            "160": 10
+          },
+          "Branches": []
+        },
+        "System.String CoreDemoApp.Views.MainWindow.MainViewModel::get_DatabaseConnectionPath()": {
+          "Lines": {
+            "168": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_DatabaseConnectionPath(System.String)": {
+          "Lines": {
+            "171": 1,
+            "172": 1,
+            "173": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 CoreDemoApp.Views.MainWindow.MainViewModel::get_ItemCount()": {
+          "Lines": {
+            "178": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_ItemCount(System.Int32)": {
+          "Lines": {
+            "181": 3,
+            "182": 3,
+            "183": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean CoreDemoApp.Views.MainWindow.MainViewModel::get_IsChecked()": {
+          "Lines": {
+            "189": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_IsChecked(System.Boolean)": {
+          "Lines": {
+            "192": 1,
+            "193": 1,
+            "194": 1
+          },
+          "Branches": []
+        },
+        "CoreDemoApp.Views.MainWindow.PersonViewModel CoreDemoApp.Views.MainWindow.MainViewModel::get_SelectedPerson()": {
+          "Lines": {
+            "201": 1
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_SelectedPerson(CoreDemoApp.Views.MainWindow.PersonViewModel)": {
+          "Lines": {
+            "204": 6,
+            "206": 0,
+            "209": 6,
+            "211": 6,
+            "212": 6,
+            "213": 6,
+            "214": 6,
+            "215": 6
+          },
+          "Branches": [
+            {
+              "Line": 204,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 204,
+              "Offset": 7,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Guid CoreDemoApp.Views.MainWindow.MainViewModel::get_CurrentPersonId()": {
+          "Lines": {
+            "221": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_CurrentPersonId(System.Guid)": {
+          "Lines": {
+            "224": 0,
+            "226": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0
+          },
+          "Branches": [
+            {
+              "Line": 224,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 224,
+              "Offset": 17,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 CoreDemoApp.Views.MainWindow.MainViewModel::get_CurrentPersonAge()": {
+          "Lines": {
+            "237": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_CurrentPersonAge(System.Int32)": {
+          "Lines": {
+            "240": 0,
+            "242": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0
+          },
+          "Branches": [
+            {
+              "Line": 240,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 240,
+              "Offset": 12,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String CoreDemoApp.Views.MainWindow.MainViewModel::get_CurrentPersonName()": {
+          "Lines": {
+            "253": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::set_CurrentPersonName(System.String)": {
+          "Lines": {
+            "256": 0,
+            "258": 0,
+            "261": 0,
+            "262": 0,
+            "263": 0
+          },
+          "Branches": [
+            {
+              "Line": 256,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 256,
+              "Offset": 17,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::.ctor(CoreDemoApp.Core.CQS.ICommandDispatcher,CoreDemoApp.Core.CQS.IQueryDispatcher,AutoMapper.IMapper,CoreDemoApp.Views.MainWindow.MainModel,System.Func`1<CoreDemoApp.Dialogs.IMessageDialogService>,System.Func`2<CoreDemoApp.Views.MainWindow.PersonModel,CoreDemoApp.Views.MainWindow.PersonViewModel>)": {
+          "Lines": {
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3,
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 3,
+            "40": 3,
+            "41": 3,
+            "43": 3,
+            "45": 0,
+            "47": 3
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 86,
+              "EndOffset": 88,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 86,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel::<DeletePersonExecute>b__25_1(System.String)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 86,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 34,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CoreDemoApp.Views.MainWindow.MainViewModel/<>c__DisplayClass27_0": {
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel/<>c__DisplayClass27_0::<LoadDatabaseExecute>b__0(System.Collections.Generic.List`1<Repository.Core.DataModel.Worker>)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 106,
+              "Offset": 73,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 106,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.MainViewModel/<>c__DisplayClass27_0::<LoadDatabaseExecute>b__1()": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 115,
+              "Offset": 29,
+              "EndOffset": 31,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 115,
+              "Offset": 29,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\MainWindow.xaml": {
+      "CoreDemoApp.Views.MainWindow.MainWindow": {
+        "System.Void CoreDemoApp.Views.MainWindow.MainWindow::InitializeComponent()": {
+          "Lines": {
+            "1": 0
+          },
+          "Branches": [
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 9,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\MainWindow.xaml.cs": {
+      "CoreDemoApp.Views.MainWindow.MainWindow": {
+        "System.Void CoreDemoApp.Views.MainWindow.MainWindow::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\PersonModel.cs": {
+      "CoreDemoApp.Views.MainWindow.PersonModel": {
+        "System.Guid CoreDemoApp.Views.MainWindow.PersonModel::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String CoreDemoApp.Views.MainWindow.PersonModel::get_Name()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.String CoreDemoApp.Views.MainWindow.PersonModel::get_WorkPlace()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 CoreDemoApp.Views.MainWindow.PersonModel::get_Age()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Views\\MainWindow\\PersonViewModel.cs": {
+      "CoreDemoApp.Views.MainWindow.PersonViewModel": {
+        "CoreDemoApp.Views.MainWindow.PersonModel CoreDemoApp.Views.MainWindow.PersonViewModel::get_PersonModel()": {
+          "Lines": {
+            "9": 5
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<CoreDemoApp.Views.MainWindow.PersonViewModel> CoreDemoApp.Views.MainWindow.PersonViewModel::CreatePersonData(System.Int32,System.Func`2<CoreDemoApp.Views.MainWindow.PersonModel,CoreDemoApp.Views.MainWindow.PersonViewModel>)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 91,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 91,
+              "EndOffset": 93,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String CoreDemoApp.Views.MainWindow.PersonViewModel::get_Name()": {
+          "Lines": {
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.PersonViewModel::set_Name(System.String)": {
+          "Lines": {
+            "42": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 17,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String CoreDemoApp.Views.MainWindow.PersonViewModel::get_WorkPlace()": {
+          "Lines": {
+            "53": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.PersonViewModel::set_WorkPlace(System.String)": {
+          "Lines": {
+            "56": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0
+          },
+          "Branches": [
+            {
+              "Line": 56,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 17,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 CoreDemoApp.Views.MainWindow.PersonViewModel::get_Age()": {
+          "Lines": {
+            "67": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.PersonViewModel::set_Age(System.Int32)": {
+          "Lines": {
+            "70": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0
+          },
+          "Branches": [
+            {
+              "Line": 70,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 12,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Guid CoreDemoApp.Views.MainWindow.PersonViewModel::get_Id()": {
+          "Lines": {
+            "81": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.PersonViewModel::set_Id(System.Guid)": {
+          "Lines": {
+            "84": 0,
+            "86": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0
+          },
+          "Branches": [
+            {
+              "Line": 84,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 17,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Views.MainWindow.PersonViewModel::.ctor(CoreDemoApp.Views.MainWindow.PersonModel)": {
+          "Lines": {
+            "11": 5,
+            "13": 5,
+            "14": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\AutoMapperModule.cs": {
+      "CoreDemoApp.Infrastructure.AutoMapperModule": {
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 26,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 26,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 58,
+              "EndOffset": 60,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 58,
+              "EndOffset": 83,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 99,
+              "EndOffset": 124,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 217,
+              "EndOffset": 219,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 217,
+              "EndOffset": 241,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 285,
+              "EndOffset": 254,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 285,
+              "EndOffset": 287,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 325,
+              "EndOffset": 327,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 325,
+              "EndOffset": 350,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean CoreDemoApp.Infrastructure.AutoMapperModule::ImplementsGenericInterface(System.Type,System.Type)": {
+          "Lines": {
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 53,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 25,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean CoreDemoApp.Infrastructure.AutoMapperModule::IsGenericType(System.Type,System.Type)": {
+          "Lines": {
+            "56": 0
+          },
+          "Branches": [
+            {
+              "Line": 56,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 11,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperModule::.ctor(System.Collections.Generic.IEnumerable`1<System.Reflection.Assembly>)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperModule::.ctor(System.Reflection.Assembly[])": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        }
+      },
+      "CoreDemoApp.Infrastructure.AutoMapperModule/<>c__DisplayClass3_0": {
+        "AutoMapper.IConfigurationProvider CoreDemoApp.Infrastructure.AutoMapperModule/<>c__DisplayClass3_0::<Load>b__2(Autofac.IComponentContext)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 7,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CoreDemoApp.Infrastructure.AutoMapperModule/<>c__DisplayClass3_1": {
+        "System.Boolean CoreDemoApp.Infrastructure.AutoMapperModule/<>c__DisplayClass3_1::<Load>b__5(System.Reflection.TypeInfo)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 6,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 14,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CoreDemoApp.Infrastructure.AutoMapperModule/<>c": {
+        "System.Boolean CoreDemoApp.Infrastructure.AutoMapperModule/<>c::<Load>b__3_0(System.Reflection.Assembly)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 6,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\HandlerAutoFacModule.cs": {
+      "CoreDemoApp.Infrastructure.MediatorModule": {
+        "System.Void CoreDemoApp.Infrastructure.MediatorModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 48,
+              "EndOffset": 50,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 48,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CoreDemoApp.Infrastructure.HandlerAutoFacModule": {
+        "System.Void CoreDemoApp.Infrastructure.HandlerAutoFacModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "56": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": [
+            {
+              "Line": 56,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 12,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 32,
+              "EndOffset": 57,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 153,
+              "EndOffset": 77,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 153,
+              "EndOffset": 155,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Infrastructure.HandlerAutoFacModule::.ctor(System.Collections.Generic.IEnumerable`1<System.Reflection.Assembly>)": {
+          "Lines": {
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Infrastructure.HandlerAutoFacModule::.ctor(System.Reflection.Assembly[])": {
+          "Lines": {
+            "51": 0
+          },
+          "Branches": []
+        }
+      },
+      "CoreDemoApp.Infrastructure.MediatorModule/<>c__DisplayClass0_0": {
+        "System.Object CoreDemoApp.Infrastructure.MediatorModule/<>c__DisplayClass0_0::<Load>b__1(System.Type)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\RepositoryModule.cs": {
+      "CoreDemoApp.Infrastructure.RepositoryModule": {
+        "System.Void CoreDemoApp.Infrastructure.RepositoryModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 12,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 43,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 122,
+              "EndOffset": 124,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 122,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CoreDemoApp.Infrastructure.RepositoryModule/<>c": {
+        "System.Boolean CoreDemoApp.Infrastructure.RepositoryModule/<>c::<Load>b__0_0(System.Reflection.ParameterInfo,Autofac.IComponentContext)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 21,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\ServicesModule.cs": {
+      "CoreDemoApp.Infrastructure.ServicesModule": {
+        "System.Void CoreDemoApp.Infrastructure.ServicesModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\ViewModelServicesModule.cs": {
+      "CoreDemoApp.Infrastructure.ViewModelServicesModule": {
+        "System.Void CoreDemoApp.Infrastructure.ViewModelServicesModule::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\AutoMapperProfiles\\PersonModelToWorkerMappingProfile.cs": {
+      "CoreDemoApp.Infrastructure.AutoMapperProfiles.PersonModelToWorkerMappingProfile": {
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperProfiles.PersonModelToWorkerMappingProfile::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 75,
+              "EndOffset": 100,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 168,
+              "EndOffset": 170,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 168,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 261,
+              "EndOffset": 263,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 261,
+              "EndOffset": 286,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\AutoMapperProfiles\\PersonToPersonViewModelMappingProfile.cs": {
+      "CoreDemoApp.Infrastructure.AutoMapperProfiles.PersonToPersonModelMappingProfile": {
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperProfiles.PersonToPersonModelMappingProfile::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": [
+            {
+              "Line": 11,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 75,
+              "EndOffset": 100,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 168,
+              "EndOffset": 170,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 168,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 261,
+              "EndOffset": 263,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 261,
+              "EndOffset": 286,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Infrastructure\\AutoMapperProfiles\\WorkerToPersonModelMappingProfile.cs": {
+      "CoreDemoApp.Infrastructure.AutoMapperProfiles.WorkerToPersonModelMappingProfile": {
+        "System.Void CoreDemoApp.Infrastructure.AutoMapperProfiles.WorkerToPersonModelMappingProfile::.ctor()": {
+          "Lines": {
+            "13": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 75,
+              "EndOffset": 100,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 168,
+              "EndOffset": 170,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 168,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 261,
+              "EndOffset": 263,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 261,
+              "EndOffset": 286,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 354,
+              "EndOffset": 356,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 15,
+              "Offset": 354,
+              "EndOffset": 379,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\CustomMessageDialogService.cs": {
+      "CoreDemoApp.Dialogs.CustomMessageDialogService": {
+        "System.Void CoreDemoApp.Dialogs.CustomMessageDialogService::ShowErrorMessage(System.String,System.String,System.String)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.CustomMessageDialogService::ShowWarningMessage(System.String,System.String,System.String)": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.CustomMessageDialogService::ShowUserMessage(System.String,System.String)": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean CoreDemoApp.Dialogs.CustomMessageDialogService::Confirm(System.String,System.String,System.String)": {
+          "Lines": {
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.CustomMessageDialogService::ShowException(System.String,System.Exception)": {
+          "Lines": {
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.CustomMessageDialogService::.ctor(CoreDemoApp.Dialogs.DialogViewModel)": {
+          "Lines": {
+            "11": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\DialogViewModel.cs": {
+      "CoreDemoApp.Dialogs.DialogViewModel": {
+        "System.String CoreDemoApp.Dialogs.DialogViewModel::get_Title()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::set_Title(System.String)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String CoreDemoApp.Dialogs.DialogViewModel::get_Message()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::set_Message(System.String)": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean CoreDemoApp.Dialogs.DialogViewModel::get_DialogResult()": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::set_DialogResult(System.Boolean)": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand`1<CoreDemoApp.Application.IClosable> CoreDemoApp.Dialogs.DialogViewModel::get_CloseWindowCommand()": {
+          "Lines": {
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::CloseWindowCommandExecute(CoreDemoApp.Application.IClosable)": {
+          "Lines": {
+            "53": 0,
+            "54": 0
+          },
+          "Branches": [
+            {
+              "Line": 53,
+              "Offset": 1,
+              "EndOffset": 3,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 53,
+              "Offset": 1,
+              "EndOffset": 9,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand`1<CoreDemoApp.Application.IClosable> CoreDemoApp.Dialogs.DialogViewModel::get_ClickYesCommand()": {
+          "Lines": {
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::ClickYesCommandExecute(CoreDemoApp.Application.IClosable)": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 62,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 8,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "GalaSoft.MvvmLight.Command.RelayCommand`1<CoreDemoApp.Application.IClosable> CoreDemoApp.Dialogs.DialogViewModel::get_ClickNoCommand()": {
+          "Lines": {
+            "66": 0
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 7,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::ClickNoCommandExecute(CoreDemoApp.Application.IClosable)": {
+          "Lines": {
+            "70": 0,
+            "71": 0,
+            "72": 0
+          },
+          "Branches": [
+            {
+              "Line": 71,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 8,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Dialogs.DialogViewModel::.ctor()": {
+          "Lines": {
+            "44": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\InfoDialog.xaml": {
+      "CoreDemoApp.Dialogs.InfoDialog": {
+        "System.Void CoreDemoApp.Dialogs.InfoDialog::InitializeComponent()": {
+          "Lines": {
+            "1": 0
+          },
+          "Branches": [
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 9,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\InfoDialog.xaml.cs": {
+      "CoreDemoApp.Dialogs.InfoDialog": {
+        "System.Void CoreDemoApp.Dialogs.InfoDialog::.ctor()": {
+          "Lines": {
+            "21": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\YesNoDialog.xaml.cs": {
+      "CoreDemoApp.Dialogs.YesNoDialog": {
+        "System.Void CoreDemoApp.Dialogs.YesNoDialog::ButtonYes_Click(System.Object,System.Windows.RoutedEventArgs)": {
+          "Lines": {
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.YesNoDialog::ButtonNo_Click(System.Object,System.Windows.RoutedEventArgs)": {
+          "Lines": {
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void CoreDemoApp.Dialogs.YesNoDialog::.ctor()": {
+          "Lines": {
+            "11": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\CoreDemoApp\\Dialogs\\YesNoDialog.xaml": {
+      "CoreDemoApp.Dialogs.YesNoDialog": {
+        "System.Void CoreDemoApp.Dialogs.YesNoDialog::InitializeComponent()": {
+          "Lines": {
+            "1": 0
+          },
+          "Branches": [
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 6,
+              "EndOffset": 9,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CoreDemoApp.Dialogs.YesNoDialog::System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)": {
+          "Lines": {
+            "28": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 3,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 3,
+              "EndOffset": 39,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 3,
+              "EndOffset": 52,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 3,
+              "EndOffset": 76,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 3,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Repository.Core.dll": {
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.Core\\DataModel\\Employer.cs": {
+      "Repository.Core.DataModel.Employer": {
+        "System.Guid Repository.Core.DataModel.Employer::get_EmployerId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Repository.Core.DataModel.Employer::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Repository.Core.DataModel.Worker> Repository.Core.DataModel.Employer::get_Workers()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.Core.DataModel.Employer::.ctor()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.Core\\DataModel\\Worker.cs": {
+      "Repository.Core.DataModel.Worker": {
+        "System.Guid Repository.Core.DataModel.Worker::get_WorkerId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Repository.Core.DataModel.Worker::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Repository.Core.DataModel.Worker::get_Age()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Repository.Core.DataModel.Employer Repository.Core.DataModel.Worker::get_Employer1()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.Core.DataModel.Worker::.ctor()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Repository.EFCore.dll": {
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\DatabaseConnectionFactory.cs": {
+      "Repository.EFCore.DatabaseConnectionFactory": {
+        "Repository.EFCore.DatabaseContext Repository.EFCore.DatabaseConnectionFactory::CreateDbContext(System.String[])": {
+          "Lines": {
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String Repository.EFCore.DatabaseConnectionFactory::GetInstallDirectory()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbContextOptions Repository.EFCore.DatabaseConnectionFactory::CreateConnectionString(System.String)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.DatabaseConnectionFactory::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\DatabaseContext.cs": {
+      "Repository.EFCore.DatabaseContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Repository.Core.DataModel.Employer> Repository.EFCore.DatabaseContext::get_Employers()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Repository.Core.DataModel.Worker> Repository.EFCore.DatabaseContext::get_Workers()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.DatabaseContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.DatabaseContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.DatabaseContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "9": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\EfUnitOfWork.cs": {
+      "Repository.EFCore.EfUnitOfWork": {
+        "System.Void Repository.EFCore.EfUnitOfWork::Dispose()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.EfUnitOfWork::Dispose(System.Boolean)": {
+          "Lines": {
+            "34": 0,
+            "36": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 1,
+              "EndOffset": 3,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 10,
+              "EndOffset": 12,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 10,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 1,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Repository.Core.Repositories.IEmployerRepository Repository.EFCore.EfUnitOfWork::get_Employers()": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "Repository.Core.Repositories.IWorkerRepository Repository.EFCore.EfUnitOfWork::get_Workers()": {
+          "Lines": {
+            "41": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Repository.EFCore.EfUnitOfWork::Complete()": {
+          "Lines": {
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.EfUnitOfWork::Migrate()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "56": 0,
+            "57": 0,
+            "61": 0,
+            "62": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": []
+        },
+        "System.String Repository.EFCore.EfUnitOfWork::get_Connection()": {
+          "Lines": {
+            "71": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.EfUnitOfWork::.ctor(Repository.EFCore.DatabaseContext,System.Func`2<Repository.EFCore.DatabaseContext,Repository.Core.Repositories.IEmployerRepository>,System.Func`2<Repository.EFCore.DatabaseContext,Repository.Core.Repositories.IWorkerRepository>)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\Repositories\\EmployerRepository.cs": {
+      "Repository.EFCore.Repositories.EmployerRepository": {
+        "System.Boolean Repository.EFCore.Repositories.EmployerRepository::AddEmployer(Repository.Core.DataModel.Employer)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 142,
+              "EndOffset": 144,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 142,
+              "EndOffset": 169,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Repository.EFCore.Repositories.EmployerRepository::RemoveEmployer(Repository.Core.DataModel.Employer)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 144,
+              "EndOffset": 146,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 144,
+              "EndOffset": 148,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<Repository.Core.DataModel.Worker> Repository.EFCore.Repositories.EmployerRepository::GetAllWorkers(Repository.Core.DataModel.Employer)": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "Repository.EFCore.DatabaseContext Repository.EFCore.Repositories.EmployerRepository::get_DatabaseContext()": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.EmployerRepository::.ctor(Repository.EFCore.DatabaseContext)": {
+          "Lines": {
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\Repositories\\Repository.cs": {
+      "Repository.EFCore.Repositories.Repository`1": {
+        "System.Collections.Generic.IEnumerable`1<TEntity> Repository.EFCore.Repositories.Repository`1::Get(System.Linq.Expressions.Expression`1<System.Func`2<TEntity,System.Boolean>>,System.Func`2<System.Linq.IQueryable`1<TEntity>,System.Linq.IOrderedQueryable`1<TEntity>>,System.String)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 8,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 43,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 75,
+              "EndOffset": 84,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "TEntity Repository.EFCore.Repositories.Repository`1::GetById(System.Guid)": {
+          "Lines": {
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<TEntity> Repository.EFCore.Repositories.Repository`1::GetAll()": {
+          "Lines": {
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::Add(TEntity)": {
+          "Lines": {
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::AddRange(System.Collections.Generic.IEnumerable`1<TEntity>)": {
+          "Lines": {
+            "55": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::Remove(TEntity)": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::RemoveRange(System.Collections.Generic.IEnumerable`1<TEntity>)": {
+          "Lines": {
+            "65": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::Load()": {
+          "Lines": {
+            "70": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::Clear()": {
+          "Lines": {
+            "75": 0,
+            "76": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Repository.EFCore.Repositories.Repository`1::Count()": {
+          "Lines": {
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.Repository`1::.ctor(Repository.EFCore.DatabaseContext)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\antti\\Documents\\GitHub\\CoreDemoApp\\Repository.EFCore\\Repositories\\WorkerRepository.cs": {
+      "Repository.EFCore.Repositories.WorkerRepository": {
+        "System.Boolean Repository.EFCore.Repositories.WorkerRepository::AddWorker(Repository.Core.DataModel.Worker)": {
+          "Lines": {
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Repository.EFCore.Repositories.WorkerRepository::RemoveWorker(Repository.Core.DataModel.Worker)": {
+          "Lines": {
+            "24": 0,
+            "25": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 13,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Repository.EFCore.Repositories.WorkerRepository::RemoveWorker(System.Guid)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 152,
+              "EndOffset": 154,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 152,
+              "EndOffset": 161,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Repository.Core.DataModel.Employer Repository.EFCore.Repositories.WorkerRepository::GetWorkerEmployer(Repository.Core.DataModel.Worker)": {
+          "Lines": {
+            "37": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Repository.Core.DataModel.Worker> Repository.EFCore.Repositories.WorkerRepository::GetAllWorkersWithEmployers()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0
+          },
+          "Branches": []
+        },
+        "Repository.EFCore.DatabaseContext Repository.EFCore.Repositories.WorkerRepository::get_DatabaseContext()": {
+          "Lines": {
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Void Repository.EFCore.Repositories.WorkerRepository::.ctor(Repository.EFCore.DatabaseContext)": {
+          "Lines": {
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
