@@ -61,8 +61,8 @@ exec { & dotnet tool install --global coverlet.console }
 #    $lastFolder = $folder
 #}
 $assembly = @(Get-ChildItem -Path "." -recurse | where {$_.extension -eq "*.Tests.dll"})
-echo "path: $assembly"
-exec { & coverlet $lastFolder.FullName -t "dotnet" -a "test -c Release --no-build" -f opencover}
+echo "path: $assembly.FullName"
+exec { & coverlet $assembly.FullName -t "dotnet" -a "test -c Release --no-build" -f opencover}
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
