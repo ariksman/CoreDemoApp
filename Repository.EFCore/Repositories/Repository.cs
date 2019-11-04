@@ -23,13 +23,10 @@ namespace Repository.EFCore.Repositories
       string includeProperties = "")
     {
       IQueryable<TEntity> query = DbSet;
-      if (filter != null)
-      {
-        query = query.Where(filter);
-      }
+      if (filter != null) query = query.Where(filter);
 
       query = includeProperties
-        .Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries)
+        .Split(new[] {','}, StringSplitOptions.RemoveEmptyEntries)
         .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
 
       return orderBy != null ? orderBy(query).ToList() : query.ToList();
@@ -72,7 +69,7 @@ namespace Repository.EFCore.Repositories
 
     public void Clear()
     {
-      Context.RemoveRange(DbSet.ToList()); 
+      Context.RemoveRange(DbSet.ToList());
     }
 
     public int Count()

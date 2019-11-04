@@ -8,30 +8,30 @@ namespace CoreDemoApp.Domain.ImpureServices
   {
     public void SeedDatabase(IUnitOfWork context)
     {
-      var newEmployer1 = new Employer()
+      var newEmployer1 = new Employer
       {
         EmployerId = Guid.NewGuid(),
-        Name = "Fidelix",
+        Name = "Fidelix"
       };
-      var newEmployer2 = new Employer()
+      var newEmployer2 = new Employer
       {
         EmployerId = Guid.NewGuid(),
-        Name = "Nokia",
+        Name = "Nokia"
       };
-      var newEmployer3 = new Employer()
+      var newEmployer3 = new Employer
       {
         EmployerId = Guid.NewGuid(),
-        Name = "Apple",
+        Name = "Apple"
       };
-      var newEmployer4 = new Employer()
+      var newEmployer4 = new Employer
       {
         EmployerId = Guid.NewGuid(),
-        Name = "Siemens",
+        Name = "Siemens"
       };
-      var newEmployer5 = new Employer()
+      var newEmployer5 = new Employer
       {
         EmployerId = Guid.NewGuid(),
-        Name = "BMW",
+        Name = "BMW"
       };
 
       context.Employers.AddEmployer(newEmployer1);
@@ -42,76 +42,76 @@ namespace CoreDemoApp.Domain.ImpureServices
 
       //context.Complete();
 
-      var newWorker1 = new Worker()
+      var newWorker1 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Pekka",
         Age = 22,
-        Employer1 = newEmployer1,
+        Employer1 = newEmployer1
       };
 
-      var newWorker2 = new Worker()
+      var newWorker2 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Jaska",
         Age = 24,
-        Employer1 = newEmployer3,
+        Employer1 = newEmployer3
       };
-      var newWorker3 = new Worker()
+      var newWorker3 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Timo",
         Age = 44,
-        Employer1 = newEmployer3,
+        Employer1 = newEmployer3
       };
-      var newWorker4 = new Worker()
+      var newWorker4 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 55,
-        Employer1 = newEmployer2,
+        Employer1 = newEmployer2
       };
-      var newWorker5 = new Worker()
+      var newWorker5 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 33,
-        Employer1 = newEmployer5,
+        Employer1 = newEmployer5
       };
-      var newWorker6 = new Worker()
+      var newWorker6 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Satu",
         Age = 28,
-        Employer1 = newEmployer4,
+        Employer1 = newEmployer4
       };
-      var newWorker7 = new Worker()
+      var newWorker7 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Taina",
         Age = 32,
-        Employer1 = newEmployer4,
+        Employer1 = newEmployer4
       };
-      var newWorker8 = new Worker()
+      var newWorker8 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Hanna",
         Age = 33,
-        Employer1 = newEmployer2,
+        Employer1 = newEmployer2
       };
-      var newWorker9 = new Worker()
+      var newWorker9 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Sini",
         Age = 33,
-        Employer1 = newEmployer5,
+        Employer1 = newEmployer5
       };
-      var newWorker10 = new Worker()
+      var newWorker10 = new Worker
       {
         WorkerId = Guid.NewGuid(),
         Name = "Matti",
         Age = 24,
-        Employer1 = newEmployer5,
+        Employer1 = newEmployer5
       };
 
       context.Workers.AddWorker(newWorker1);

@@ -4,6 +4,5 @@ namespace CoreDemoApp.Domain
 {
   public class GetCurrentDatabaseConnectionQuery : IQuery
   {
-
   }
 }

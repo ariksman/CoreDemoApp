@@ -5,11 +5,11 @@ namespace CoreDemoApp.Domain
 {
   public class AddPersonWithEmployer : ICommand
   {
-    public Worker Worker { get; }
-
     public AddPersonWithEmployer(Worker worker)
     {
       Worker = worker;
     }
+
+    public Worker Worker { get; }
   }
 }

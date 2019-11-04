@@ -15,8 +15,8 @@ namespace CoreDemoApp.Core.DDD.Specifications
 
     public override Expression<Func<T, bool>> ToExpression()
     {
-      Expression<Func<T, bool>> expression = _specification.ToExpression();
-      UnaryExpression notExpression = Expression.Not(expression.Body);
+      var expression = _specification.ToExpression();
+      var notExpression = Expression.Not(expression.Body);
 
       return Expression.Lambda<Func<T, bool>>(notExpression, expression.Parameters.Single());
     }

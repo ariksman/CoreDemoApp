@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using CoreDemoApp.Domain.Model;
 
 namespace CoreDemoApp.Views.MainWindow
 {
   public class PersonViewModel : ModelBase
   {
-    public PersonModel PersonModel { get; set; }
-
     public PersonViewModel(PersonModel personModel)
     {
       PersonModel = personModel;
     }
 
+    public PersonModel PersonModel { get; set; }
+
     public static List<PersonViewModel> CreatePersonData(int count, Func<PersonModel, PersonViewModel> viewModelFunc)
     {
       var persons = new List<PersonViewModel>();
       var rand = new Random();
-      for (int i = 0; i < count; i++)
+      for (var i = 0; i < count; i++)
       {
-        var personModel = new PersonModel()
+        var personModel = new PersonModel
         {
           Id = Guid.NewGuid(),
           Name = "test " + i,
-          Age = rand.Next(),
+          Age = rand.Next()
         };
 
         var newPerson = viewModelFunc(personModel);
@@ -34,15 +33,13 @@ namespace CoreDemoApp.Views.MainWindow
     }
 
     #region Public properties
+
     public string Name
     {
       get => PersonModel.Name;
       set
       {
-        if (PersonModel.Name == value)
-        {
-          return;
-        }
+        if (PersonModel.Name == value) return;
         PersonModel.Name = value;
         NotifyPropertyChanged();
       }
@@ -53,10 +50,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => PersonModel.WorkPlace;
       set
       {
-        if (PersonModel.WorkPlace == value)
-        {
-          return;
-        }
+        if (PersonModel.WorkPlace == value) return;
         PersonModel.WorkPlace = value;
         NotifyPropertyChanged();
       }
@@ -67,10 +61,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => PersonModel.Age;
       set
       {
-        if (PersonModel.Age == value)
-        {
-          return;
-        }
+        if (PersonModel.Age == value) return;
         PersonModel.Age = value;
         NotifyPropertyChanged();
       }
@@ -81,14 +72,12 @@ namespace CoreDemoApp.Views.MainWindow
       get => PersonModel.Id;
       set
       {
-        if (PersonModel.Id == value)
-        {
-          return;
-        }
+        if (PersonModel.Id == value) return;
         PersonModel.Id = value;
         NotifyPropertyChanged();
       }
     }
+
     #endregion
   }
 }

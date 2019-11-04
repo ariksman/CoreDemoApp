@@ -1,10 +1,11 @@
 ﻿using System.Reflection;
 using Autofac;
 using MediatR;
+using Module = Autofac.Module;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class MediatorModule : Autofac.Module
+  public class MediatorModule : Module
   {
     protected override void Load(ContainerBuilder builder)
     {
@@ -24,7 +25,11 @@ namespace CoreDemoApp.Infrastructure
       builder.Register<ServiceFactory>(context =>
       {
         var componentContext = context.Resolve<IComponentContext>();
-        return t => { object o; return componentContext.TryResolve(t, out o) ? o : null; };
+        return t =>
+        {
+          object o;
+          return componentContext.TryResolve(t, out o) ? o : null;
+        };
       });
 
       //builder.RegisterGeneric(typeof(LoggingBehavior<,>)).As(typeof(IPipelineBehavior<,>));

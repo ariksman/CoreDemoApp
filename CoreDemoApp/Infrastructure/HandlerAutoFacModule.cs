@@ -3,10 +3,11 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using CoreDemoApp.Core.CQS;
+using Module = Autofac.Module;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class HandlerAutoFacModule : Autofac.Module
+  public class HandlerAutoFacModule : Module
   {
     private readonly IEnumerable<Assembly> _assembliesToScan;
 
@@ -15,7 +16,9 @@ namespace CoreDemoApp.Infrastructure
       _assembliesToScan = assembliesToScan;
     }
 
-    public HandlerAutoFacModule(params Assembly[] assembliesToScan) : this((IEnumerable<Assembly>)assembliesToScan) { }
+    public HandlerAutoFacModule(params Assembly[] assembliesToScan) : this((IEnumerable<Assembly>) assembliesToScan)
+    {
+    }
 
     protected override void Load(ContainerBuilder builder)
     {

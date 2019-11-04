@@ -4,7 +4,7 @@ using CoreDemoApp.Application;
 namespace CoreDemoApp.Dialogs
 {
   /// <summary>
-  /// Interaction logic for InfoDialog.xaml
+  ///   Interaction logic for InfoDialog.xaml
   /// </summary>
   public partial class YesNoDialog : Window, IClosable
   {

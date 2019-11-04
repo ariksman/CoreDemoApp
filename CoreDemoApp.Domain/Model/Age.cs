@@ -4,12 +4,12 @@ namespace CoreDemoApp.Domain.Model
 {
   public class Age : ValueObject<Age>
   {
-    public int Value { get; }
-
     public Age(int value)
     {
       Value = value;
     }
+
+    public int Value { get; }
 
     public static Result<Age> Create(Maybe<int> ageOrNothing)
     {

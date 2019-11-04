@@ -5,7 +5,7 @@ namespace CoreDemoApp.Core.CQS
   public interface IQueryDispatcher
   {
     /// <summary>
-    /// Dispatches a query and retrieves a query result
+    ///   Dispatches a query and retrieves a query result
     /// </summary>
     /// <typeparam name="TQuery">Request to execute type</typeparam>
     /// <typeparam name="TResult">Request Result to get back type</typeparam>
@@ -16,7 +16,7 @@ namespace CoreDemoApp.Core.CQS
       where TResult : new();
 
     /// <summary>
-    /// Dispatches a query and retrieves am async query result
+    ///   Dispatches a query and retrieves am async query result
     /// </summary>
     /// <typeparam name="TQuery">Request to execute type</typeparam>
     /// <typeparam name="TResult">Request Result to get back type</typeparam>

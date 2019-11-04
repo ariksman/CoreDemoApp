@@ -13,6 +13,8 @@ namespace Repository.EFCore.Repositories
     {
     }
 
+    public DatabaseContext DatabaseContext => Context as DatabaseContext;
+
     public bool AddWorker(Worker worker)
     {
       DatabaseContext.Workers.Add(worker);
@@ -45,7 +47,5 @@ namespace Repository.EFCore.Repositories
 
       return workers;
     }
-
-    public DatabaseContext DatabaseContext => Context as DatabaseContext;
   }
 }

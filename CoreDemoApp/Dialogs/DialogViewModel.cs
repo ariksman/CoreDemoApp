@@ -1,5 +1,4 @@
-﻿using System;
-using CoreDemoApp.Application;
+﻿using CoreDemoApp.Application;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
@@ -7,7 +6,18 @@ namespace CoreDemoApp.Dialogs
 {
   public class DialogViewModel : ViewModelBase
   {
+    private RelayCommand<IClosable> _clickNoCommand;
+
+    private RelayCommand<IClosable> _clickYesCommand;
+
+    private RelayCommand<IClosable> _closeWindowCommand;
+
+    private bool _dialogResult;
+
+    private string _message;
     private string _title;
+
+
     public string Title
     {
       get => _title;
@@ -18,7 +28,6 @@ namespace CoreDemoApp.Dialogs
       }
     }
 
-    private string _message;
     public string Message
     {
       get => _message;
@@ -29,7 +38,6 @@ namespace CoreDemoApp.Dialogs
       }
     }
 
-    private bool _dialogResult;
     public bool DialogResult
     {
       get => _dialogResult;
@@ -40,30 +48,25 @@ namespace CoreDemoApp.Dialogs
       }
     }
 
+    public RelayCommand<IClosable> CloseWindowCommand =>
+      _closeWindowCommand ??= new RelayCommand<IClosable>(CloseWindowCommandExecute);
 
-    public DialogViewModel()
-    {
-    }
+    public RelayCommand<IClosable> ClickYesCommand =>
+      _clickYesCommand ??= new RelayCommand<IClosable>(ClickYesCommandExecute);
 
-    private RelayCommand<IClosable> _closeWindowCommand;
-    public RelayCommand<IClosable> CloseWindowCommand => _closeWindowCommand ??= new RelayCommand<IClosable>(CloseWindowCommandExecute);
+    public RelayCommand<IClosable> ClickNoCommand =>
+      _clickNoCommand ??= new RelayCommand<IClosable>(ClickNoCommandExecute);
 
     private void CloseWindowCommandExecute(IClosable window)
     {
       window?.Close();
     }
 
-    private RelayCommand<IClosable> _clickYesCommand;
-    public RelayCommand<IClosable> ClickYesCommand => _clickYesCommand ??= new RelayCommand<IClosable>(ClickYesCommandExecute);
-
     private void ClickYesCommandExecute(IClosable window)
     {
       DialogResult = true;
       window?.Close();
     }
-
-    private RelayCommand<IClosable> _clickNoCommand;
-    public RelayCommand<IClosable> ClickNoCommand => _clickNoCommand ??= new RelayCommand<IClosable>(ClickNoCommandExecute);
 
     private void ClickNoCommandExecute(IClosable window)
     {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using AutoMapper;
+using Module = Autofac.Module;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class AutoMapperModule : Autofac.Module
+  public class AutoMapperModule : Module
   {
     private readonly IEnumerable<Assembly> _assembliesToScan;
 
@@ -16,7 +17,9 @@ namespace CoreDemoApp.Infrastructure
       _assembliesToScan = assembliesToScan;
     }
 
-    public AutoMapperModule(params Assembly[] assembliesToScan) : this((IEnumerable<Assembly>)assembliesToScan) { }
+    public AutoMapperModule(params Assembly[] assembliesToScan) : this((IEnumerable<Assembly>) assembliesToScan)
+    {
+    }
 
     protected override void Load(ContainerBuilder builder)
     {
@@ -29,7 +32,8 @@ namespace CoreDemoApp.Infrastructure
         .SelectMany(a => a.DefinedTypes)
         .ToArray();
 
-      var openTypes = new[] {
+      var openTypes = new[]
+      {
         typeof(IValueResolver<,,>),
         typeof(IMemberValueResolver<,,,>),
         typeof(ITypeConverter<,>),
@@ -39,19 +43,23 @@ namespace CoreDemoApp.Infrastructure
 
       foreach (var type in openTypes.SelectMany(openType =>
         allTypes.Where(t => t.IsClass && !t.IsAbstract && ImplementsGenericInterface(t.AsType(), openType))))
-      {
         builder.RegisterType(type.AsType()).InstancePerDependency();
-      }
 
       builder.Register<IConfigurationProvider>(ctx => new MapperConfiguration(cfg => cfg.AddMaps(assembliesToScan)));
 
-      builder.Register<IMapper>(ctx => new Mapper(ctx.Resolve<IConfigurationProvider>(), ctx.Resolve)).InstancePerDependency();
+      builder.Register<IMapper>(ctx => new Mapper(ctx.Resolve<IConfigurationProvider>(), ctx.Resolve))
+        .InstancePerDependency();
     }
 
     private static bool ImplementsGenericInterface(Type type, Type interfaceType)
-      => IsGenericType(type, interfaceType) || type.GetTypeInfo().ImplementedInterfaces.Any(@interface => IsGenericType(@interface, interfaceType));
+    {
+      return IsGenericType(type, interfaceType) || type.GetTypeInfo().ImplementedInterfaces
+               .Any(@interface => IsGenericType(@interface, interfaceType));
+    }
 
     private static bool IsGenericType(Type type, Type genericType)
-      => type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == genericType;
+    {
+      return type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == genericType;
+    }
   }
 }

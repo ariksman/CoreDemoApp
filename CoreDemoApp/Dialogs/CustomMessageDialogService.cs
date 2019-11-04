@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Input;
 
 namespace CoreDemoApp.Dialogs
 {
@@ -18,11 +17,11 @@ namespace CoreDemoApp.Dialogs
       _viewModel.Title = "Error happened!";
       _viewModel.Message = message + Environment.NewLine + details;
 
-      new InfoDialog()
+      new InfoDialog
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
-        DataContext = _viewModel,
+        DataContext = _viewModel
       }.ShowDialog();
     }
 
@@ -36,11 +35,11 @@ namespace CoreDemoApp.Dialogs
       _viewModel.Title = "Status update";
       _viewModel.Message = message;
 
-      new InfoDialog()
+      new InfoDialog
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
-        DataContext = _viewModel,
+        DataContext = _viewModel
       }.ShowDialog();
     }
 
@@ -49,11 +48,11 @@ namespace CoreDemoApp.Dialogs
       _viewModel.Title = "Error happened!";
       _viewModel.Message = message;
 
-      new YesNoDialog()
+      new YesNoDialog
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
-        DataContext = _viewModel,
+        DataContext = _viewModel
       }.ShowDialog();
 
       return _viewModel.DialogResult;
@@ -64,11 +63,11 @@ namespace CoreDemoApp.Dialogs
       _viewModel.Title = "Error";
       _viewModel.Message = ex.Message;
 
-      new InfoDialog()
+      new InfoDialog
       {
         WindowStartupLocation = WindowStartupLocation.CenterOwner,
         Owner = System.Windows.Application.Current.MainWindow,
-        DataContext = _viewModel,
+        DataContext = _viewModel
       }.ShowDialog();
     }
   }

@@ -1,11 +1,10 @@
 ﻿using Autofac;
 using CoreDemoApp.Dialogs;
-using CoreDemoApp.Domain;
 using CoreDemoApp.Domain.ImpureServices;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class ServicesModule : Autofac.Module
+  public class ServicesModule : Module
   {
     protected override void Load(ContainerBuilder builder)
     {

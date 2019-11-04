@@ -20,7 +20,7 @@ namespace CoreDemoApp.Application
     {
       try
       {
-        if(!command.PersonId.HasValue) return Result.Fail("Null argument given");
+        if (!command.PersonId.HasValue) return Result.Fail("Null argument given");
 
         var selectedWorker = _unitOfWork.Workers.GetById(command.PersonId.Value);
         _unitOfWork.Workers.RemoveWorker(selectedWorker);
@@ -35,7 +35,7 @@ namespace CoreDemoApp.Application
 
     public Task<Result> HandleAsync(RemoveSelectedPersonCommand command)
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
   }
 }

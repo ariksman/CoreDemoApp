@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AutoMapper;
-using CoreDemoApp.Domain;
+﻿using AutoMapper;
 using CoreDemoApp.Views.MainWindow;
 using Repository.Core.DataModel;
 

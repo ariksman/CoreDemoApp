@@ -5,7 +5,8 @@ namespace CoreDemoApp.Core.DDD
 {
   // 
   /// <summary>
-  /// Original implementation explained <a href="https://enterprisecraftsmanship.com/2017/08/28/value-object-a-better-implementation/">here</a>.
+  ///   Original implementation explained
+  ///   <a href="https://enterprisecraftsmanship.com/2017/08/28/value-object-a-better-implementation/">here</a>.
   /// </summary>
   public abstract class ValueObject
   {
@@ -19,7 +20,7 @@ namespace CoreDemoApp.Core.DDD
       if (GetType() != obj.GetType())
         return false;
 
-      var valueObject = (ValueObject)obj;
+      var valueObject = (ValueObject) obj;
 
       return GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
     }
@@ -31,7 +32,7 @@ namespace CoreDemoApp.Core.DDD
         {
           unchecked
           {
-            return (current * 23) + (obj?.GetHashCode() ?? 0);
+            return current * 23 + (obj?.GetHashCode() ?? 0);
           }
         });
     }

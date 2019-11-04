@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-using CoreDemoApp.Views;
 using CoreDemoApp.Views.MainWindow;
 
 namespace CoreDemoApp
 {
   /// <summary>
-  /// Interaction logic for App.xaml
+  ///   Interaction logic for App.xaml
   /// </summary>
   public partial class App : System.Windows.Application
   {
@@ -22,7 +19,7 @@ namespace CoreDemoApp
       PresentationTraceSources.DataBindingSource.Listeners.Add(new DebugTraceListener());
 
       AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-      App.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+      Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
       TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
       var mainWindow = new MainWindow();
@@ -43,6 +40,5 @@ namespace CoreDemoApp
     {
       throw new NotImplementedException();
     }
-
   }
 }

@@ -4,7 +4,7 @@ using CoreDemoApp.Views.MainWindow;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class ViewModelServicesModule : Autofac.Module
+  public class ViewModelServicesModule : Module
   {
     protected override void Load(ContainerBuilder builder)
     {

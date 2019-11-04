@@ -3,13 +3,13 @@ using Autofac;
 using Autofac.Core;
 using Microsoft.EntityFrameworkCore;
 using Repository.Core;
-using Repository.Core.Repositories;
 using Repository.EFCore;
 using Repository.EFCore.Repositories;
+using Module = Autofac.Module;
 
 namespace CoreDemoApp.Infrastructure
 {
-  public class RepositoryModule : Autofac.Module
+  public class RepositoryModule : Module
   {
     protected override void Load(ContainerBuilder builder)
     {
@@ -23,7 +23,7 @@ namespace CoreDemoApp.Infrastructure
               return DatabaseConnectionFactory.CreateConnectionString(dataSource);
             }))
         .InstancePerLifetimeScope();
-      
+
       //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
       var repositoriesAssembly = Assembly.GetAssembly(typeof(EmployerRepository));
       builder.RegisterAssemblyTypes(repositoriesAssembly)

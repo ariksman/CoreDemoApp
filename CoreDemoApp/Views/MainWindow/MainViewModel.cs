@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using AutoMapper;
 using CoreDemoApp.Core.CQS;
 using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
-using CoreDemoApp.Domain.Model;
 using CSharpFunctionalExtensions;
 using GalaSoft.MvvmLight.Command;
 using Repository.Core.DataModel;
@@ -16,11 +14,11 @@ namespace CoreDemoApp.Views.MainWindow
   public class MainViewModel : ModelBase
   {
     private readonly ICommandDispatcher _commandDispatcher;
-    private readonly IQueryDispatcher _queryDispatcher;
-    private readonly IMapper _mapper;
     private readonly MainModel _mainModel;
+    private readonly IMapper _mapper;
     private readonly Func<IMessageDialogService> _messageDialogFunc;
     private readonly Func<PersonModel, PersonViewModel> _personViewModelFunc;
+    private readonly IQueryDispatcher _queryDispatcher;
 
     public MainViewModel(
       ICommandDispatcher commandDispatcher,
@@ -45,6 +43,12 @@ namespace CoreDemoApp.Views.MainWindow
         var persons = PersonViewModel.CreatePersonData(20, personViewModelFunc);
       }
     }
+
+    #region Public collections
+
+    public ObservableCollection<PersonViewModel> Persons { get; }
+
+    #endregion
 
     #region Relay commands
 
@@ -103,22 +107,16 @@ namespace CoreDemoApp.Views.MainWindow
         .Tap(result =>
         {
           var personModels = _mapper.Map<List<PersonModel>>(result);
-          foreach (var personModel in personModels)
-          {
-            Persons.Add(_personViewModelFunc(personModel));
-          }
+          foreach (var personModel in personModels) Persons.Add(_personViewModelFunc(personModel));
           IsChecked = true;
           ItemCount = Persons.Count;
         })
         .Tap(() =>
         {
           _queryDispatcher.Dispatch<GetCurrentDatabaseConnectionQuery, Result<string>>(databaseInfoQuery)
-            .Tap((data => DatabaseConnectionPath = data));
+            .Tap(data => DatabaseConnectionPath = data);
         })
-        .Tap(result =>
-        {
-          _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {result.Count} items");
-        })
+        .Tap(result => { _messageDialogFunc().ShowUserMessage(GetType().Name, $" Loaded {result.Count} items"); })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while loading database", details));
     }
@@ -141,7 +139,7 @@ namespace CoreDemoApp.Views.MainWindow
     {
       var command = new RemoveAllDataFromDatabaseCommand();
       _commandDispatcher.Dispatch<RemoveAllDataFromDatabaseCommand, Result>(command)
-        .Tap(() => { _messageDialogFunc().ShowUserMessage(GetType().Name, $"Database cleared"); })
+        .Tap(() => { _messageDialogFunc().ShowUserMessage(GetType().Name, "Database cleared"); })
         .OnFailure(details =>
           _messageDialogFunc().ShowErrorMessage(GetType().Name, "Error while clearing database", details));
     }
@@ -152,12 +150,6 @@ namespace CoreDemoApp.Views.MainWindow
       SelectedPerson = null;
       ItemCount = 0;
     }
-
-    #endregion
-
-    #region Public collections
-
-    public ObservableCollection<PersonViewModel> Persons { get; private set; }
 
     #endregion
 
@@ -201,10 +193,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => _selectedPerson;
       set
       {
-        if (_selectedPerson == value)
-        {
-          return;
-        }
+        if (_selectedPerson == value) return;
 
         _selectedPerson = value;
 
@@ -221,10 +210,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => SelectedPerson.Id;
       set
       {
-        if (SelectedPerson.Id == value)
-        {
-          return;
-        }
+        if (SelectedPerson.Id == value) return;
 
         SelectedPerson.Id = value;
         NotifyPropertyChanged();
@@ -237,10 +223,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => SelectedPerson.Age;
       set
       {
-        if (SelectedPerson.Age == value)
-        {
-          return;
-        }
+        if (SelectedPerson.Age == value) return;
 
         SelectedPerson.Age = value;
         NotifyPropertyChanged();
@@ -253,10 +236,7 @@ namespace CoreDemoApp.Views.MainWindow
       get => SelectedPerson.Name;
       set
       {
-        if (SelectedPerson.Name == value)
-        {
-          return;
-        }
+        if (SelectedPerson.Name == value) return;
 
         SelectedPerson.Name = value;
         NotifyPropertyChanged();

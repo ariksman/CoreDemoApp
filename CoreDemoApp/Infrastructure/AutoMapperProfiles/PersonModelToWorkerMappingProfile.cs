@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using CoreDemoApp.Domain.Model;
 using CoreDemoApp.Views.MainWindow;
 using Repository.Core.DataModel;
 

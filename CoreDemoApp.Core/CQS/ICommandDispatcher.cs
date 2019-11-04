@@ -6,7 +6,7 @@ namespace CoreDemoApp.Core.CQS
   public interface ICommandDispatcher
   {
     /// <summary>
-    /// Dispatches a command to its handler
+    ///   Dispatches a command to its handler
     /// </summary>
     /// <typeparam name="TCommand">Command Type</typeparam>
     /// <typeparam name="TResult"></typeparam>
@@ -17,7 +17,7 @@ namespace CoreDemoApp.Core.CQS
 
 
     /// <summary>
-    /// Dispatches an async command to its handler
+    ///   Dispatches an async command to its handler
     /// </summary>
     /// <typeparam name="TCommand">Command Type</typeparam>
     /// <typeparam name="TResult"></typeparam>

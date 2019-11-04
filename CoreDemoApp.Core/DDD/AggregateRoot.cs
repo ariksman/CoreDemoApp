@@ -2,8 +2,9 @@
 
 namespace CoreDemoApp.Core.DDD
 {
-  /// <summary> An aggregate root base class.
-  /// Explicitly mark aggregate roots and implement their common logic
+  /// <summary>
+  ///   An aggregate root base class.
+  ///   Explicitly mark aggregate roots and implement their common logic
   /// </summary>
   public abstract class AggregateRoot : Entity
   {

@@ -9,29 +9,29 @@
         ShowInTaskbar="False"
         Title="{Binding Title}"
         ResizeMode="NoResize" MinWidth="300" SizeToContent="WidthAndHeight">
-    <Border BorderBrush="White" BorderThickness="2">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <TextBlock x:Name="textBlock" Text="The Message Text" TextWrapping="Wrap" Margin="5"/>
-            <StackPanel Orientation="Horizontal"
-                        Grid.Row="2"
-                        HorizontalAlignment="Center">
-                <StackPanel.Resources>
-                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                        <Setter Property="Margin" Value="5"/>
-                        <Setter Property="Width" Value="75"/>
-                    </Style>
-                </StackPanel.Resources>
-                <Button Content="Yes" Click="ButtonYes_Click"
-                        Command="{Binding ClickYesCommand}"
-                        CommandParameter="{Binding ElementName=YesNoDialogWindow}"/>
-                <Button Content="No" Click="ButtonNo_Click"
-                        Command="{Binding ClickNoCommand}"
-                        CommandParameter="{Binding ElementName=YesNoDialogWindow}"/>
-            </StackPanel>
-        </Grid>
-    </Border>
+  <Border BorderBrush="White" BorderThickness="2">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <TextBlock x:Name="textBlock" Text="The Message Text" TextWrapping="Wrap" Margin="5" />
+      <StackPanel Orientation="Horizontal"
+                  Grid.Row="2"
+                  HorizontalAlignment="Center">
+        <StackPanel.Resources>
+          <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Width" Value="75" />
+          </Style>
+        </StackPanel.Resources>
+        <Button Content="Yes" Click="ButtonYes_Click"
+                Command="{Binding ClickYesCommand}"
+                CommandParameter="{Binding ElementName=YesNoDialogWindow}" />
+        <Button Content="No" Click="ButtonNo_Click"
+                Command="{Binding ClickNoCommand}"
+                CommandParameter="{Binding ElementName=YesNoDialogWindow}" />
+      </StackPanel>
+    </Grid>
+  </Border>
 </Window>

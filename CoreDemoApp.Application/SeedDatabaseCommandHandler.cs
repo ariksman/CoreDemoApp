@@ -10,8 +10,8 @@ namespace CoreDemoApp.Application
 {
   public class SeedDatabaseCommandHandler : ICommandHandler<SeedDatabaseCommand, Result>
   {
-    private readonly IUnitOfWork _unitOfWork;
     private readonly IDatabaseSeeder _databaseSeeder;
+    private readonly IUnitOfWork _unitOfWork;
 
     public SeedDatabaseCommandHandler(IUnitOfWork unitOfWork, IDatabaseSeeder databaseSeeder)
     {

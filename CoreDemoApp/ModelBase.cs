@@ -8,7 +8,8 @@ using GalaSoft.MvvmLight;
 namespace CoreDemoApp
 {
   /// <summary>
-  /// See <a href="https://www.codeproject.com/Tips/876349/WPF-Validation-using-INotifyDataErrorInfo">this link</a> for more information.
+  ///   See <a href="https://www.codeproject.com/Tips/876349/WPF-Validation-using-INotifyDataErrorInfo">this link</a> for
+  ///   more information.
   /// </summary>
   public class ModelBase : ViewModelBase, INotifyPropertyChanged, INotifyDataErrorInfo
   {
@@ -17,7 +18,8 @@ namespace CoreDemoApp
     public new event PropertyChangedEventHandler PropertyChanged;
 
     /// <summary>
-    /// See <a href="http://jesseliberty.com/2012/06/28/c-5making-inotifypropertychanged-easier/">this link</a> for more information.
+    ///   See <a href="http://jesseliberty.com/2012/06/28/c-5making-inotifypropertychanged-easier/">this link</a> for more
+    ///   information.
     /// </summary>
     /// <param name="caller"></param>
     protected void NotifyPropertyChanged([CallerMemberName] string caller = "")
@@ -26,13 +28,14 @@ namespace CoreDemoApp
     }
 
     /// <summary>
-    /// Updates all bindings within the program
+    ///   Updates all bindings within the program
     /// </summary>
     protected void UpdateAllBindings()
     {
       var eventHandler = PropertyChanged;
       eventHandler?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
     }
+
     #endregion
 
     #region Notify data error
@@ -55,9 +58,9 @@ namespace CoreDemoApp
       get
       {
         if (_errors == null) _errors = new Dictionary<string, List<string>>();
-        return (_errors.Count > 0);
+        return _errors.Count > 0;
       }
-      set { _hasErrors = value; }
+      set => _hasErrors = value;
     }
 
     // object is valid
@@ -65,14 +68,14 @@ namespace CoreDemoApp
 
     public bool IsValid
     {
-      get { return !this.HasErrors; }
-      set { _isValid = value; }
+      get => !HasErrors;
+      set => _isValid = value;
     }
 
     public void AddError(string propertyName, string error)
     {
       // Add error to list
-      _errors[propertyName] = new List<string>() { error };
+      _errors[propertyName] = new List<string> {error};
       NotifyErrorsChanged(propertyName);
     }
 

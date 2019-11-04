@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Core;
 using Repository.Core.Repositories;
-using Repository.EFCore.Repositories;
 
 namespace Repository.EFCore
 {
@@ -14,7 +13,7 @@ namespace Repository.EFCore
       DatabaseContext context,
       Func<DatabaseContext, IEmployerRepository> employersRepositoryFunc,
       Func<DatabaseContext, IWorkerRepository> workerRepositoryFunc
-      )
+    )
     {
       _context = context;
       Employers = employersRepositoryFunc(_context);
@@ -27,14 +26,6 @@ namespace Repository.EFCore
     {
       Dispose(true);
       GC.SuppressFinalize(this);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-      if (disposing)
-      {
-        _context?.Dispose();
-      }
     }
 
     public IEmployerRepository Employers { get; }
@@ -66,9 +57,11 @@ namespace Repository.EFCore
       }
     }
 
-    public string Connection
+    public string Connection => _context.Database.ProviderName;
+
+    protected virtual void Dispose(bool disposing)
     {
-      get => _context.Database.ProviderName;
+      if (disposing) _context?.Dispose();
     }
   }
 }

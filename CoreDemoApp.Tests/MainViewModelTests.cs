@@ -6,20 +6,14 @@ using CoreDemoApp.Dialogs;
 using CoreDemoApp.Domain;
 using CoreDemoApp.Views.MainWindow;
 using CSharpFunctionalExtensions;
-using Xunit;
 using Moq;
 using Repository.Core.DataModel;
+using Xunit;
 
 namespace CoreDemoApp.Tests
 {
   public class MainViewModelTests
   {
-    private Mock<ICommandDispatcher> _commandDispatcherMock;
-    private Mock<IQueryDispatcher> _queryDispatcherMock;
-    private Mock<IMapper> _mapperMock;
-    private Mock<MainModel> _mainModelMock;
-    private Mock<IMessageDialogService> _messageDialogMock;
-
     public MainViewModelTests()
     {
       _commandDispatcherMock = new Mock<ICommandDispatcher>();
@@ -28,6 +22,12 @@ namespace CoreDemoApp.Tests
       _mainModelMock = new Mock<MainModel>();
       _messageDialogMock = new Mock<IMessageDialogService>();
     }
+
+    private readonly Mock<ICommandDispatcher> _commandDispatcherMock;
+    private readonly Mock<IQueryDispatcher> _queryDispatcherMock;
+    private readonly Mock<IMapper> _mapperMock;
+    private readonly Mock<MainModel> _mainModelMock;
+    private readonly Mock<IMessageDialogService> _messageDialogMock;
 
     [Fact]
     public void ClearPersonsCommand_When_Called_Empties_Persons_Collection()
@@ -41,7 +41,7 @@ namespace CoreDemoApp.Tests
         _mainModelMock.Object,
         messageFunc,
         personViewModelFunc
-        );
+      );
       viewModel.Persons.Add(new PersonViewModel(new PersonModel()));
 
       viewModel.ClearPersonsCommand.Execute(null);
@@ -71,15 +71,15 @@ namespace CoreDemoApp.Tests
     [Fact]
     public void LoadDatabaseCommand_When_Called_Adds_Returned_Workers_To_Persons_Collection()
     {
-      var personModel = new PersonModel() {Name = "testModel"};
-      var personViewModel =  new PersonViewModel(personModel);
+      var personModel = new PersonModel {Name = "testModel"};
+      var personViewModel = new PersonViewModel(personModel);
       var messageFunc = new Func<IMessageDialogService>(() => _messageDialogMock.Object);
       var personViewModelFunc = new Func<PersonModel, PersonViewModel>(model => personViewModel);
       _queryDispatcherMock.Setup(m =>
           m.Dispatch<LoadDataForListViewQuery, Result<List<Worker>>>(It.IsAny<LoadDataForListViewQuery>()))
         .Returns(Result.Ok(new List<Worker>()));
       _mapperMock.Setup(m => m.Map<List<PersonModel>>(It.IsAny<object>()))
-        .Returns(new List<PersonModel>() {personModel});
+        .Returns(new List<PersonModel> {personModel});
       _queryDispatcherMock.Setup(m =>
           m.Dispatch<GetCurrentDatabaseConnectionQuery, Result<string>>(It.IsAny<GetCurrentDatabaseConnectionQuery>()))
         .Returns(Result.Ok("ok"));

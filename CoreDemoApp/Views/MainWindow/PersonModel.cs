@@ -8,6 +8,5 @@ namespace CoreDemoApp.Views.MainWindow
     public string Name { get; set; }
     public string WorkPlace { get; set; }
     public int Age { get; set; }
-
   }
 }
