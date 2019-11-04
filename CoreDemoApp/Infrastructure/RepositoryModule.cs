@@ -23,8 +23,7 @@ namespace CoreDemoApp.Infrastructure
               return DatabaseConnectionFactory.CreateConnectionString(dataSource);
             }))
         .InstancePerLifetimeScope();
-        
-
+      
       //builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
       var repositoriesAssembly = Assembly.GetAssembly(typeof(EmployerRepository));
       builder.RegisterAssemblyTypes(repositoriesAssembly)
