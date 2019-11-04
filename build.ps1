@@ -44,7 +44,6 @@ exec { & dotnet tool install --global coverlet.console }
 
 $testDirs  = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
 $testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -Recurse)
-#$testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Recurse)
 
 $i = 0
 ForEach ($folder in $testDirs) { 
@@ -54,9 +53,8 @@ ForEach ($folder in $testDirs) {
     $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
     #$format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
     
-    exec { & dotnet test $folder.FullName -c Release --no-build /p:CoverletOutput='$root\coverage' /p:MergeWith='$root\coverage.json' $format}
+    exec { & dotnet test $folder.FullName -c Release --no-build /p:CoverletOutput='$root' /p:MergeWith='$root\coverage.json' $format}
     #exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
-
 }
 
 choco install codecov --no-progress
