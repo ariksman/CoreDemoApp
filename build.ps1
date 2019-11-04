@@ -42,28 +42,22 @@ echo "`n`n----- TEST -----`n"
 
 exec { & dotnet tool install --global coverlet.console }
 
-#$testDirs  = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
-#$testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -Recurse)
+$testDirs  = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
+$testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -Recurse)
 #$testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Recurse)
-#$testDirs += @(Get-ChildItem -Path "." -recurse | where {$_.extension -eq "*.Tests.csproj"})
 
-#$i = 0
-#$lastFolder
-#ForEach ($folder in $testDirs) { 
-#    echo "Testing $folder"
+$i = 0
+ForEach ($folder in $testDirs) { 
+    echo "Testing $folder"
 
-#    $i++
-    #$format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
-#    $format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
+    $i++
+    $format = @{ $true = "/p:CoverletOutputFormat=opencover"; $false = ""}[$i -eq $testDirs.Length ]
+    #$format = @{ $true = "-f opencover"; $false = ""}[$i -eq $testDirs.Length ]
     
-    #exec { & dotnet test $folder.FullName -c Release --no-build /p:CoverletOutput='$root\coverage' /p:MergeWith='$root\coverage.json' /p:Include="[*]*" $format}
-#    exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
-#    $lastFolder = $folder
-#}
-$folder = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
-$assembly = @(Get-ChildItem -Path $folder.FullName -recurse | where {$_.extension -eq "*.Tests.dll"})
-echo "path: $assembly.FullName"
-exec { & coverlet $assembly.FullName -t "dotnet" -a "test -c Release --no-build" -f opencover}
+    exec { & dotnet test $folder.FullName -c Release --no-build /p:CoverletOutput='$root\coverage' /p:MergeWith='$root\coverage.json' $format}
+    #exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
+
+}
 
 choco install codecov --no-progress
 exec { & codecov -f "$root\coverage.opencover.xml" }
