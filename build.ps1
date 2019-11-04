@@ -60,7 +60,7 @@ exec { & dotnet tool install --global coverlet.console }
 #    exec { & coverlet $folder.FullName -t "dotnet" -a "test -c Release --no-build" --merge-with "$root\coverage.json"}
 #    $lastFolder = $folder
 #}
-$assembly = @(Get-ChildItem -Path "." -recurse | where {$_.extension -eq "*.Tests.dll"})
+$assembly = @(Get-ChildItem -Path . -recurse | where {$_.extension -eq "*.Tests.dll"})
 echo "path: $assembly.FullName"
 exec { & coverlet $assembly.FullName -t "dotnet" -a "test -c Release --no-build" -f opencover}
 
