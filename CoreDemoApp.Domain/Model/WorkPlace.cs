@@ -1,4 +1,4 @@
-﻿using CoreDemoApp.Domain.DDD;
+﻿using CoreDemoApp.Core.DDD;
 
 namespace CoreDemoApp.Domain.Model
 {

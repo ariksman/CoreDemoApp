@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreDemoApp.Domain.DDD
+namespace CoreDemoApp.Core.DDD
 {
   public abstract class Entity
   {

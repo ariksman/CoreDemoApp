@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using CoreDemoApp.Domain.DDD;
+using CoreDemoApp.Core.DDD;
 using CSharpFunctionalExtensions;
 
 namespace CoreDemoApp.Domain.Model
