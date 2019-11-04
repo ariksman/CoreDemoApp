@@ -45,6 +45,7 @@ exec { & dotnet tool install --global coverlet.console }
 $testDirs  = @(Get-ChildItem -Path . -Include "*.Tests" -Directory -Recurse)
 $testDirs += @(Get-ChildItem -Path . -Include "*.IntegrationTests" -Directory -Recurse)
 $testDirs += @(Get-ChildItem -Path . -Include "*FunctionalTests" -Directory -Recurse)
+echo @(Get-ChildItem -Path "." -recurse | where {$_.extension -eq ".csproj"})
 
 $i = 0
 $lastFolder
