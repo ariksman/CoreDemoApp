@@ -91,5 +91,4 @@ namespace CoreDemoApp.Views.MainWindow
     }
     #endregion
   }
-
 }
