@@ -40,5 +40,20 @@ namespace CoreDemoApp.Tests
 
       _unitOfWorkMock.Verify(m => m.Workers.AddWorker(It.IsAny<Worker>()), Times.Once);
     }
+
+    [Fact]
+    public void Command_Completes_Transaction_On_Succesful_Run()
+    {
+      var command = new AddPersonWithEmployer(new Worker());
+      var handler = new AddPersonWithEmployerCommandHandler(_unitOfWorkMock.Object);
+
+      _unitOfWorkMock
+        .Setup(m => m.Workers.AddWorker(It.IsAny<Worker>()))
+        .Returns(() => true);
+
+      handler.Handle(command);
+
+      _unitOfWorkMock.Verify(m => m.Complete(), Times.Once);
+    }
   }
 }
