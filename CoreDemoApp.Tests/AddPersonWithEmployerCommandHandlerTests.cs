@@ -55,5 +55,20 @@ namespace CoreDemoApp.Tests
 
       _unitOfWorkMock.Verify(m => m.Complete(), Times.Once);
     }
+
+    [Fact]
+    public void Command_Return_Failed_Result_When_Transaction_With_Database_Throws_Exception()
+    {
+      var command = new AddPersonWithEmployer(new Worker());
+      var handler = new AddPersonWithEmployerCommandHandler(_unitOfWorkMock.Object);
+
+      _unitOfWorkMock
+        .Setup(m => m.Workers.AddWorker(It.IsAny<Worker>()))
+        .Returns(() => throw new Exception());
+
+      var result = handler.Handle(command);
+
+      Assert.True(result.IsFailure);
+    }
   }
 }
