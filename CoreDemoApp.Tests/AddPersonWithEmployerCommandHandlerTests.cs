@@ -57,7 +57,7 @@ namespace CoreDemoApp.Tests
     }
 
     [Fact]
-    public void Command_Return_Failed_Result_When_Transaction_With_Database_Throws_Exception()
+    public void Command_Returns_Failed_Result_When_Transaction_With_Database_Throws_Exception()
     {
       var command = new AddPersonWithEmployer(new Worker());
       var handler = new AddPersonWithEmployerCommandHandler(_unitOfWorkMock.Object);
@@ -69,6 +69,29 @@ namespace CoreDemoApp.Tests
       var result = handler.Handle(command);
 
       Assert.True(result.IsFailure);
+    }
+
+    [Fact]
+    public void On_Succesful_Data_Manipulation_Changes_Will_Be_Persisted_Into_Database()
+    {
+      var command = new AddPersonWithEmployer(new Worker());
+      var handler = new AddPersonWithEmployerCommandHandler(_unitOfWorkMock.Object);
+
+      _unitOfWorkMock
+        .Setup(m => m.Workers.AddWorker(It.IsAny<Worker>()))
+        .Returns(true);
+
+
+      var result = handler.Handle(command);
+
+      if (result.IsSuccess)
+      {
+        _unitOfWorkMock.Verify(m => m.Complete(), Times.Once);
+      }
+      else
+      {
+        _unitOfWorkMock.Verify(m => m.Complete(), Times.Never);
+      }
     }
   }
 }
