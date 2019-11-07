@@ -13,7 +13,7 @@ namespace CoreDemoApp.Application
 
     public AddPersonWithEmployerCommandHandler(IUnitOfWork unitOfWork)
     {
-      _unitOfWork = unitOfWork;
+      _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
     }
 
     public Result Handle(AddPersonWithEmployer command)
