@@ -15,7 +15,7 @@ namespace Repository.EFCore
       Func<DatabaseContext, IWorkerRepository> workerRepositoryFunc
     )
     {
-      _context = context;
+      _context = context ?? throw new ArgumentNullException(nameof(context));
       Employers = employersRepositoryFunc(_context);
       Workers = workerRepositoryFunc(_context);
 
