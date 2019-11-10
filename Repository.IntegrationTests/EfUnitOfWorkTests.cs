@@ -1,4 +1,5 @@
 using System;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
 using Repository.Core.Repositories;
@@ -19,7 +20,7 @@ namespace Repository.IntegrationTests
     }
 
     [Test]
-    public void On_Creation_Exception_Is_Thrown_If_Null_DatabaseConnection_Is_Ijected()
+    public void On_Creation_Exception_Is_Thrown_If_Null_DatabaseConnection_Is_Injected()
     {
       Assert.Throws<ArgumentNullException>(() => new EfUnitOfWork(
         null,
