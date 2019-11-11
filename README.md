@@ -10,7 +10,7 @@ The program is implemented with .NET Core 3.0 preview, follows the MVVM design p
 
 ## Architecture
 <img src="https://github.com/ariksman/CoreDemoApp/blob/master/Structure.PNG" />
-<img src="https://github.com/ariksman/CoreDemoApp/blob/master/repository.PNG" />
+<img src="https://github.com/ariksman/CoreDemoApp/blob/master/repository.png" />
 
 ## Third party components
 
